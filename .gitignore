@@ -26,3 +26,9 @@ frontend/src/assets/react.svg
 frontend/src/assets/vite.svg
 
 !data/pcap_features/
+
+!data/processed/
+!data/final_forecasts/
+!outputs/
+
+!models/

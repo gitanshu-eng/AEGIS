@@ -8,9 +8,14 @@ node_modules/
 frontend/dist/
 frontend/.vite/
 *.joblib
-data/pcap_synthetic/
-data/raw/
+*.tar.gz
+data/
+outputs/
 models/
 *.log
 .DS_Store
 Thumbs.db
+fix_*.py
+patch*.py
+write_*.py
+package-lock.json

@@ -1,6 +1,0 @@
-Ablation_Configuration,Mean_LODO_PR_AUC
-A: attack_rate only,0.386
-B: + velocity,0.4195
-C: + acceleration,0.4409
-D: + network flow volume,0.4559
-E: Full Scale-Invariant Suite,0.4608

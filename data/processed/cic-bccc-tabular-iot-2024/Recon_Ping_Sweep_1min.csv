@@ -1,3 +1,0 @@
-time_window,total_flows,attack_flows,benign_flows,flow_duration_mean,flow_bytes_sum,flow_packets_sum,attack_rate,observed
-2023-07-09 13:49:00,41,41,0,67887101.36585365,31998.0,1882.0,1.0,1
-2023-07-09 13:50:00,30,30,0,16978160.9,13957.0,560.0,1.0,1

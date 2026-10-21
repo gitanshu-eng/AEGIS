@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { Database, Clock, Shield, Activity } from "lucide-react";
+ï»¿import React, { useEffect, useState } from "react";
 import { API } from "../../api/client";
+import { Database, Clock, Shield, Activity } from "lucide-react";
 
 interface MemoryRecord {
   id: string;
@@ -71,10 +71,10 @@ export const MemoryViewer: React.FC<MemoryViewerProps> = ({ dataset }) => {
         </div>
         <div>
           <h2 className="text-sm font-bold text-white font-mono tracking-wide">
-            PHASE 5 — HISTORICAL EPISODE MEMORY
+            PHASE 5 ï¿½ HISTORICAL EPISODE MEMORY
           </h2>
           <p className="text-xs text-slate-400 mt-0.5">
-            {records.length} memory records loaded • Source: phase5_memory_store.json • Data: HISTORICAL BATCH
+            {records.length} memory records loaded ï¿½ Source: phase5_memory_store.json ï¿½ Data: HISTORICAL BATCH
           </p>
         </div>
       </div>

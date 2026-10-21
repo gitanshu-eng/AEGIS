@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+ï»¿import React, { useState, useEffect } from 'react';
 import { 
   ShieldAlert, 
   Terminal, 
@@ -110,7 +110,7 @@ const VerificationTracker: React.FC<{ dataset: string }> = ({ dataset }) => {
   return (
     <div className="bg-slate-900/80 border border-slate-800 rounded-lg p-4 space-y-3">
       <h3 className="text-xs font-mono font-bold uppercase tracking-wider text-slate-300 mb-3">
-        Phase 6B Live Defense State Tracker — {records.length} Records
+        Phase 6B Live Defense State Tracker ï¿½ {records.length} Records
       </h3>
       {records.map((rec, idx) => {
         const activeIndex = STATE_MACHINE.indexOf(

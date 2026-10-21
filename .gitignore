@@ -19,3 +19,8 @@ fix_*.py
 patch*.py
 write_*.py
 package-lock.json
+frontend/tsconfig.node.tsbuildinfo
+frontend/vite.config.d.ts
+frontend/vite.config.js
+frontend/src/assets/react.svg
+frontend/src/assets/vite.svg

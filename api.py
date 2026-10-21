@@ -4,7 +4,7 @@ import json
 import pandas as pd
 import numpy as np
 from typing import Optional, List, Dict, Any
-from fastapi import FastAPI, Query, HTTPException
+from fastapi import FastAPI, Query, HTTPException, Depends, Security
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
@@ -447,5 +447,6 @@ def serve_spa(full_path: str):
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run("api:app", host="0.0.0.0", port=8000, reload=False)
+
 
 

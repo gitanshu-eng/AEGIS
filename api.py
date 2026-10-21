@@ -1,4 +1,4 @@
-import os
+﻿import os
 import glob
 import json
 import pandas as pd
@@ -94,16 +94,30 @@ def _df_to_records(df):
         records.append(rec)
     return records
 
+
+from fastapi.security.api_key import APIKeyHeader
+from fastapi import Security, status as http_status
+
+AEGIS_API_KEY = os.environ.get('AEGIS_API_KEY', 'dev-insecure-key')
+_api_key_header = APIKeyHeader(name='X-API-Key', auto_error=False)
+
+async def verify_key(key: str = Security(_api_key_header)):
+    if key != AEGIS_API_KEY:
+        raise HTTPException(status_code=403, detail='Invalid or missing API key')
+
+@app.get("/api/health-public", include_in_schema=False)
 @app.get("/api/health")
 def health():
     return {"status":"ONLINE","version":"3.0.0","platform":"local-windows",
             "outputs_dir_exists":os.path.exists(OUTPUTS_DIR),"data_dir_exists":os.path.exists(DATA_DIR)}
 
-@app.get("/api/datasets")
+@app.get("/api/health-public", include_in_schema=False)
+@app.get("/api/datasets", dependencies=[Depends(verify_key)])
 def list_datasets():
     return [{"id":s,"label":DATASET_LABELS.get(s,s),"phases":_phase_flags(s),"complete":all(_phase_flags(s).values())} for s in COMPLETE_DATASETS]
 
-@app.get("/api/network-state")
+@app.get("/api/health-public", include_in_schema=False)
+@app.get("/api/network-state", dependencies=[Depends(verify_key)])
 def get_network_state(dataset: str = Query(...), limit: int = Query(default=0, ge=0)):
     _require_dataset(dataset)
     path = os.path.join(DATA_DIR, "processed", f"{dataset}_temporal_continuous.csv")
@@ -117,7 +131,8 @@ def get_network_state(dataset: str = Query(...), limit: int = Query(default=0, g
     if limit > 0: df = df.tail(limit)
     return _df_to_records(df)
 
-@app.get("/api/forecasts")
+@app.get("/api/health-public", include_in_schema=False)
+@app.get("/api/forecasts", dependencies=[Depends(verify_key)])
 def get_forecasts(dataset: str = Query(...), limit: int = Query(default=0, ge=0)):
     _require_dataset(dataset)
     path = os.path.join(DATA_DIR, "final_forecasts", f"{dataset}_final_forecast.csv")
@@ -135,7 +150,8 @@ def get_forecasts(dataset: str = Query(...), limit: int = Query(default=0, ge=0)
     if limit > 0: df = df.tail(limit)
     return _df_to_records(df)
 
-@app.get("/api/incidents")
+@app.get("/api/health-public", include_in_schema=False)
+@app.get("/api/incidents", dependencies=[Depends(verify_key)])
 def get_incidents(dataset: str = Query(...)):
     _require_dataset(dataset)
     path = os.path.join(OUTPUTS_DIR, "incident_records", f"{dataset}_incidents.json")
@@ -163,7 +179,8 @@ def get_incidents(dataset: str = Query(...)):
         })
     return result
 
-@app.get("/api/episodes")
+@app.get("/api/health-public", include_in_schema=False)
+@app.get("/api/episodes", dependencies=[Depends(verify_key)])
 def get_episodes(dataset: str = Query(...)):
     _require_dataset(dataset)
     path = os.path.join(OUTPUTS_DIR, "phase4_investigations", f"{dataset}_episodes.json")
@@ -197,6 +214,7 @@ def get_episodes(dataset: str = Query(...)):
         })
     return result
 
+@app.get("/api/health-public", include_in_schema=False)
 @app.get("/api/memory")
 def get_memory(dataset: str = Query(...)):
     _require_dataset(dataset)
@@ -239,6 +257,7 @@ SLUG_TO_OLD_DATASET = {
     "cic_apt_iiot_2024": "cic_apt_iiot_2024",
 }
 
+@app.get("/api/health-public", include_in_schema=False)
 @app.get("/api/simulations")
 def get_simulations(dataset: str = Query(...)):
     _require_dataset(dataset)
@@ -276,6 +295,7 @@ def get_simulations(dataset: str = Query(...)):
             })
     return result
 
+@app.get("/api/health-public", include_in_schema=False)
 @app.get("/api/executions")
 def get_executions(dataset: str = Query(...)):
     _require_dataset(dataset)
@@ -301,6 +321,7 @@ def get_executions(dataset: str = Query(...)):
         })
     return result
 
+@app.get("/api/health-public", include_in_schema=False)
 @app.get("/api/verifications")
 def get_verifications(dataset: str = Query(...)):
     _require_dataset(dataset)
@@ -344,11 +365,13 @@ def get_verifications(dataset: str = Query(...)):
 
 # --- Live Replay Endpoints -------------------------------------------
 
+@app.get("/api/health-public", include_in_schema=False)
 @app.get("/api/live/tick")
 def live_tick(dataset: str = Query(...)):
     _require_dataset(dataset)
     return replay_manager.tick(dataset)
 
+@app.get("/api/health-public", include_in_schema=False)
 @app.get("/api/live/status")
 def live_status(dataset: str = Query(...)):
     _require_dataset(dataset)
@@ -383,6 +406,7 @@ def infer_escalation(features: Dict[str, Any]):
         raise HTTPException(status_code=422, detail=str(result))
     return result
 
+@app.get("/api/health-public", include_in_schema=False)
 @app.get("/api/infer/status")
 def infer_status():
     return {
@@ -394,10 +418,12 @@ def infer_status():
 
 from src.pcap_replay import pcap_replay_manager
 
-@app.get("/api/pcap/tick")
+@app.get("/api/health-public", include_in_schema=False)
+@app.get("/api/pcap/tick", dependencies=[Depends(verify_key)])
 def pcap_tick(name: str = Query(...)):
     return pcap_replay_manager.tick(name)
 
+@app.get("/api/health-public", include_in_schema=False)
 @app.get("/api/pcap/status")
 def pcap_status(name: str = Query(...)):
     return pcap_replay_manager.status(name)
@@ -421,3 +447,5 @@ def serve_spa(full_path: str):
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run("api:app", host="0.0.0.0", port=8000, reload=False)
+
+

@@ -1,4 +1,4 @@
-__pycache__/
+﻿__pycache__/
 *.pyc
 *.pyo
 .env
@@ -25,10 +25,12 @@ frontend/vite.config.js
 frontend/src/assets/react.svg
 frontend/src/assets/vite.svg
 
+!data/
+data/*
 !data/pcap_features/
-
 !data/processed/
 !data/final_forecasts/
+
 !outputs/
 
 !models/

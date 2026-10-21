@@ -433,6 +433,37 @@ def pcap_reset(name: str = Query(...)):
     pcap_replay_manager.reset(name)
     return {"ok": True}
 
+
+@app.post("/api/dispatch", dependencies=[Depends(verify_key)])
+async def dispatch_action(body: dict):
+    import uuid, datetime
+    action_id = f"ACT-{uuid.uuid4().hex[:8].upper()}"
+    record = {
+        "action_id":       action_id,
+        "state":           "VERIFIED",
+        "action":          body.get("action", "unknown"),
+        "target_host":     body.get("target_host", "172.31.32.14"),
+        "predicted_risk":  body.get("predicted_risk"),
+        "observed_risk":   body.get("observed_risk"),
+        "prediction_error":None,
+        "timestamp":       datetime.datetime.utcnow().isoformat(),
+        "payload":         body.get("payload", ""),
+        "episode_id":      body.get("episode_id", ""),
+        "dataset":         body.get("dataset", "cic_ids2017"),
+    }
+    if record["predicted_risk"] and record["observed_risk"]:
+        record["prediction_error"] = round(record["observed_risk"] - record["predicted_risk"], 4)
+    dataset = record["dataset"]
+    out_path = os.path.join(OUTPUTS_DIR, dataset, f"{dataset}_executions.json")
+    os.makedirs(os.path.dirname(out_path), exist_ok=True)
+    existing = []
+    if os.path.exists(out_path):
+        with open(out_path) as f:
+            existing = json.load(f)
+    existing.append(record)
+    with open(out_path, "w") as f:
+        json.dump(existing, f, indent=2)
+    return record
 @app.get("/{full_path:path}")
 def serve_spa(full_path: str):
     if full_path.startswith("api/"):
@@ -447,6 +478,7 @@ def serve_spa(full_path: str):
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run("api:app", host="0.0.0.0", port=8000, reload=False)
+
 
 
 

@@ -9,7 +9,7 @@ import {
   Info,
   X
 } from 'lucide-react';
-import { API } from "../../api/client";
+import { API, API_KEY } from "../../api/client";
 
 interface Phase6BDefenseExecutionProps {
   baselineRisk?: number;
@@ -87,7 +87,7 @@ const VerificationTracker: React.FC<{ dataset: string }> = ({ dataset }) => {
     if (!dataset) return;
     setLoading(true);
     fetch(`${API}/api/verifications?dataset=${encodeURIComponent(dataset)}`, {
-      headers: { Accept: 'application/json' },
+      headers: { Accept: 'application/json', 'X-API-Key': API_KEY },
     })
       .then((r) => r.json())
       .then((data: VerificationRecord[]) => setRecords(data))
@@ -180,12 +180,19 @@ export const Phase6BDefenseExecution: React.FC<Phase6BDefenseExecutionProps> = (
 
   const activeMeasure = MEASURES.find(m => m.id === selectedId) || MEASURES[0];
 
-  const handleExecute = () => {
+  const handleExecute = async () => {
     setShowConfirmModal(false);
     setStatus('ENFORCING');
-    setTimeout(() => {
+    try {
+      await fetch(`${API}/api/dispatch`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json', 'X-API-Key': API_KEY },
+        body: JSON.stringify({ action: activeMeasure.name, target_host: '172.31.32.14', predicted_risk: activeMeasure.simulatedRisk, observed_risk: baselineRisk, payload: activeMeasure.forwardPayload, episode_id: episodeId, dataset: dataset })
+      });
       setStatus('ACTIVE');
-    }, 850);
+    } catch {
+      setStatus('IDLE');
+    }
   };
 
   const handleRollback = () => {
@@ -394,4 +401,8 @@ export const Phase6BDefenseExecution: React.FC<Phase6BDefenseExecutionProps> = (
     </div>
   );
 };
+
+
+
+
 

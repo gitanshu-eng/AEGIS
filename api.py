@@ -120,7 +120,7 @@ def list_datasets():
 @app.get("/api/network-state", dependencies=[Depends(verify_key)])
 def get_network_state(dataset: str = Query(...), limit: int = Query(default=0, ge=0)):
     _require_dataset(dataset)
-    path = os.path.join(DATA_DIR, "processed", f"{dataset}_temporal_continuous.csv")
+    path = _resolve_processed_path(dataset, "_temporal_continuous.csv")
     if not os.path.exists(path):
         raise HTTPException(status_code=404, detail=f"Phase 1 file not found for {dataset}")
     df = pd.read_csv(path)
@@ -135,7 +135,7 @@ def get_network_state(dataset: str = Query(...), limit: int = Query(default=0, g
 @app.get("/api/forecasts", dependencies=[Depends(verify_key)])
 def get_forecasts(dataset: str = Query(...), limit: int = Query(default=0, ge=0)):
     _require_dataset(dataset)
-    path = os.path.join(DATA_DIR, "final_forecasts", f"{dataset}_final_forecast.csv")
+    path = _resolve_forecast_path(dataset)
     if not os.path.exists(path):
         raise HTTPException(status_code=404, detail=f"Phase 2 file not found for {dataset}")
     df = pd.read_csv(path)
@@ -256,6 +256,29 @@ SLUG_TO_OLD_DATASET = {
     "cic_bccc_tabular_iot_2024": "cic_bccc_tabular_iot_2024",
     "cic_apt_iiot_2024": "cic_apt_iiot_2024",
 }
+def _resolve_processed_path(dataset: str, suffix: str) -> str:
+    """Try slug-named file first, fall back to old date-named file."""
+    slug_path = os.path.join(DATA_DIR, "processed", f"{dataset}{suffix}")
+    if os.path.exists(slug_path):
+        return slug_path
+    old_name = SLUG_TO_OLD_DATASET.get(dataset)
+    if old_name:
+        date_path = os.path.join(DATA_DIR, "processed", f"{old_name}{suffix}")
+        if os.path.exists(date_path):
+            return date_path
+    return slug_path  # return slug path so 404 message is meaningful
+
+def _resolve_forecast_path(dataset: str) -> str:
+    """Try slug-named forecast file first, fall back to old date-named file."""
+    slug_path = os.path.join(DATA_DIR, "final_forecasts", f"{dataset}_final_forecast.csv")
+    if os.path.exists(slug_path):
+        return slug_path
+    old_name = SLUG_TO_OLD_DATASET.get(dataset)
+    if old_name:
+        date_path = os.path.join(DATA_DIR, "final_forecasts", f"{old_name}_final_forecast.csv")
+        if os.path.exists(date_path):
+            return date_path
+    return slug_path
 
 @app.get("/api/health-public", include_in_schema=False)
 @app.get("/api/simulations")

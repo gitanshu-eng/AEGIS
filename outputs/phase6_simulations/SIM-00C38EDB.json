@@ -1,0 +1,330 @@
+{
+  "simulation_id": "SIM-00C38EDB",
+  "generated_at": "2026-10-03T20:18:18.485797Z",
+  "classification": "MODEL-BASED HYPOTHETICAL SIMULATION \u2014 DECISION SUPPORT ONLY",
+  "warning": "Phase 6 outputs are hypothetical. No defensive action has been taken. Human SOC authorization required before execution.",
+  "baseline_signals": {
+    "F": 0.8111,
+    "A": 0.579746835443038,
+    "D": 0.7191797510182527,
+    "P": 1.0
+  },
+  "baseline_risk_score": 74.4673,
+  "baseline_risk_level": "HIGH",
+  "recommended_intervention": {
+    "code": "HOST_ISOLATION",
+    "name": "Host Isolation",
+    "expected_score": 34.5307,
+    "expected_level": "MEDIUM",
+    "expected_reduction_pct": 53.63,
+    "caveat": "Based on expected risk reduction only. Operational cost must be weighed by SOC analyst."
+  },
+  "simulations": [
+    {
+      "intervention_code": "NO_INTERVENTION",
+      "intervention_name": "No Intervention (Baseline)",
+      "description": "Current state. No defensive action taken. All signals unchanged.",
+      "assumption": "Network continues on current trajectory.",
+      "notes": "Baseline reference.",
+      "baseline_risk_score": 74.4673,
+      "baseline_risk_level": "HIGH",
+      "outcomes": {
+        "min": {
+          "hypothetical_signals": {
+            "F": 0.8111,
+            "A": 0.579747,
+            "D": 0.71918,
+            "P": 1.0
+          },
+          "hypothetical_risk_score": 74.4673,
+          "hypothetical_risk_level": "HIGH",
+          "risk_reduction": 0.0,
+          "risk_reduction_pct": 0.0
+        },
+        "expected": {
+          "hypothetical_signals": {
+            "F": 0.8111,
+            "A": 0.579747,
+            "D": 0.71918,
+            "P": 1.0
+          },
+          "hypothetical_risk_score": 74.4673,
+          "hypothetical_risk_level": "HIGH",
+          "risk_reduction": 0.0,
+          "risk_reduction_pct": 0.0
+        },
+        "max": {
+          "hypothetical_signals": {
+            "F": 0.8111,
+            "A": 0.579747,
+            "D": 0.71918,
+            "P": 1.0
+          },
+          "hypothetical_risk_score": 74.4673,
+          "hypothetical_risk_level": "HIGH",
+          "risk_reduction": 0.0,
+          "risk_reduction_pct": 0.0
+        }
+      },
+      "label": "MODEL-BASED HYPOTHETICAL SIMULATION \u2014 NOT A REAL DEFENSIVE ACTION"
+    },
+    {
+      "intervention_code": "RATE_LIMITING",
+      "intervention_name": "Rate Limiting",
+      "description": "Throttle inbound traffic volume to reduce attack flow throughput.",
+      "assumption": "Rate limiting reduces A by 30-60%. D drops proportionally. F adjusts slowly. P unaffected short-term.",
+      "notes": "Effective against volumetric floods. Less effective against slow-and-low attacks.",
+      "baseline_risk_score": 74.4673,
+      "baseline_risk_level": "HIGH",
+      "outcomes": {
+        "min": {
+          "hypothetical_signals": {
+            "F": 0.72999,
+            "A": 0.405823,
+            "D": 0.575344,
+            "P": 1.0
+          },
+          "hypothetical_risk_score": 63.3836,
+          "hypothetical_risk_level": "HIGH",
+          "risk_reduction": 11.0837,
+          "risk_reduction_pct": 14.88
+        },
+        "expected": {
+          "hypothetical_signals": {
+            "F": 0.64888,
+            "A": 0.318861,
+            "D": 0.467467,
+            "P": 1.0
+          },
+          "hypothetical_risk_score": 55.8829,
+          "hypothetical_risk_level": "MEDIUM",
+          "risk_reduction": 18.5844,
+          "risk_reduction_pct": 24.96
+        },
+        "max": {
+          "hypothetical_signals": {
+            "F": 0.56777,
+            "A": 0.231899,
+            "D": 0.35959,
+            "P": 0.9
+          },
+          "hypothetical_risk_score": 46.8823,
+          "hypothetical_risk_level": "MEDIUM",
+          "risk_reduction": 27.585,
+          "risk_reduction_pct": 37.04
+        }
+      },
+      "label": "MODEL-BASED HYPOTHETICAL SIMULATION \u2014 NOT A REAL DEFENSIVE ACTION"
+    },
+    {
+      "intervention_code": "HOST_ISOLATION",
+      "intervention_name": "Host Isolation",
+      "description": "Isolate highest-risk hosts from the network segment.",
+      "assumption": "Isolating primary sources reduces A by 50-80%. D drops sharply. F adjusts significantly. P resets partially.",
+      "notes": "Highest risk-reduction potential. Carries operational disruption cost. Ineffective if attacker has multiple footholds.",
+      "baseline_risk_score": 74.4673,
+      "baseline_risk_level": "HIGH",
+      "outcomes": {
+        "min": {
+          "hypothetical_signals": {
+            "F": 0.56777,
+            "A": 0.289873,
+            "D": 0.431508,
+            "P": 0.7
+          },
+          "hypothetical_risk_score": 46.9901,
+          "hypothetical_risk_level": "MEDIUM",
+          "risk_reduction": 27.4772,
+          "risk_reduction_pct": 36.9
+        },
+        "expected": {
+          "hypothetical_signals": {
+            "F": 0.446105,
+            "A": 0.202911,
+            "D": 0.287672,
+            "P": 0.5
+          },
+          "hypothetical_risk_score": 34.5307,
+          "hypothetical_risk_level": "MEDIUM",
+          "risk_reduction": 39.9366,
+          "risk_reduction_pct": 53.63
+        },
+        "max": {
+          "hypothetical_signals": {
+            "F": 0.32444,
+            "A": 0.115949,
+            "D": 0.143836,
+            "P": 0.3
+          },
+          "hypothetical_risk_score": 22.0712,
+          "hypothetical_risk_level": "LOW",
+          "risk_reduction": 52.3961,
+          "risk_reduction_pct": 70.36
+        }
+      },
+      "label": "MODEL-BASED HYPOTHETICAL SIMULATION \u2014 NOT A REAL DEFENSIVE ACTION"
+    },
+    {
+      "intervention_code": "TRAFFIC_BLOCKING",
+      "intervention_name": "Suspicious-Traffic Blocking",
+      "description": "Deploy firewall/IDS rules to block traffic matching candidate MITRE signatures.",
+      "assumption": "Signature-based blocking reduces A by 25-50%. D drops moderately. F adjusts moderately.",
+      "notes": "Effective only against known signatures. Dependent on MITRE candidate accuracy.",
+      "baseline_risk_score": 74.4673,
+      "baseline_risk_level": "HIGH",
+      "outcomes": {
+        "min": {
+          "hypothetical_signals": {
+            "F": 0.689435,
+            "A": 0.43481,
+            "D": 0.611303,
+            "P": 0.9
+          },
+          "hypothetical_risk_score": 62.0181,
+          "hypothetical_risk_level": "HIGH",
+          "risk_reduction": 12.4492,
+          "risk_reduction_pct": 16.72
+        },
+        "expected": {
+          "hypothetical_signals": {
+            "F": 0.608325,
+            "A": 0.365241,
+            "D": 0.525001,
+            "P": 0.8
+          },
+          "hypothetical_risk_score": 53.9498,
+          "hypothetical_risk_level": "MEDIUM",
+          "risk_reduction": 20.5175,
+          "risk_reduction_pct": 27.55
+        },
+        "max": {
+          "hypothetical_signals": {
+            "F": 0.527215,
+            "A": 0.289873,
+            "D": 0.431508,
+            "P": 0.7
+          },
+          "hypothetical_risk_score": 45.5707,
+          "hypothetical_risk_level": "MEDIUM",
+          "risk_reduction": 28.8966,
+          "risk_reduction_pct": 38.8
+        }
+      },
+      "label": "MODEL-BASED HYPOTHETICAL SIMULATION \u2014 NOT A REAL DEFENSIVE ACTION"
+    },
+    {
+      "intervention_code": "INCREASED_MONITORING",
+      "intervention_name": "Increased Monitoring",
+      "description": "Heighten logging, alerting sensitivity, and analyst attention.",
+      "assumption": "Monitoring does not reduce attack signals. F may increase slightly. All other signals unchanged.",
+      "notes": "Lowest disruption cost. Does not reduce risk score. Recommended as parallel action.",
+      "baseline_risk_score": 74.4673,
+      "baseline_risk_level": "HIGH",
+      "outcomes": {
+        "min": {
+          "hypothetical_signals": {
+            "F": 0.851655,
+            "A": 0.579747,
+            "D": 0.71918,
+            "P": 1.0
+          },
+          "hypothetical_risk_score": 75.8868,
+          "hypothetical_risk_level": "HIGH",
+          "risk_reduction": -1.4195,
+          "risk_reduction_pct": -1.91
+        },
+        "expected": {
+          "hypothetical_signals": {
+            "F": 0.851655,
+            "A": 0.579747,
+            "D": 0.71918,
+            "P": 1.0
+          },
+          "hypothetical_risk_score": 75.8868,
+          "hypothetical_risk_level": "HIGH",
+          "risk_reduction": -1.4195,
+          "risk_reduction_pct": -1.91
+        },
+        "max": {
+          "hypothetical_signals": {
+            "F": 0.8111,
+            "A": 0.579747,
+            "D": 0.71918,
+            "P": 1.0
+          },
+          "hypothetical_risk_score": 74.4673,
+          "hypothetical_risk_level": "HIGH",
+          "risk_reduction": 0.0,
+          "risk_reduction_pct": 0.0
+        }
+      },
+      "label": "MODEL-BASED HYPOTHETICAL SIMULATION \u2014 NOT A REAL DEFENSIVE ACTION"
+    }
+  ],
+  "phase5_context": [
+    {
+      "memory_id": "EP-Friday-02-03-2018-a0d311",
+      "dataset": "Friday-02-03-2018",
+      "similarity_score": 0.7783780696,
+      "peak_risk_level": "HIGH",
+      "lead_lag_classification": "LAGGING",
+      "sustained_tactics": [
+        "TA0043: Reconnaissance"
+      ],
+      "context_note": "Historical context only \u2014 not used to calibrate assumptions (Phase 5 shallow)."
+    },
+    {
+      "memory_id": "EP-Wednesday-28-02-2018-19c604",
+      "dataset": "Wednesday-28-02-2018",
+      "similarity_score": 0.6376692892,
+      "peak_risk_level": "HIGH",
+      "lead_lag_classification": "SIMULTANEOUS",
+      "sustained_tactics": [
+        "TA0043: Reconnaissance"
+      ],
+      "context_note": "Historical context only \u2014 not used to calibrate assumptions (Phase 5 shallow)."
+    },
+    {
+      "memory_id": "EP-Wednesday-28-02-2018-669c21",
+      "dataset": "Wednesday-28-02-2018",
+      "similarity_score": 0.6208851946,
+      "peak_risk_level": "HIGH",
+      "lead_lag_classification": "SIMULTANEOUS",
+      "sustained_tactics": [
+        "TA0043: Reconnaissance"
+      ],
+      "context_note": "Historical context only \u2014 not used to calibrate assumptions (Phase 5 shallow)."
+    }
+  ],
+  "traceability": {
+    "mode": "EPISODE_DRIVEN",
+    "source_episode_id": "EP-Friday-02-03-2018-02b744",
+    "source_dataset": "Friday-02-03-2018",
+    "episode_start": "2018-03-02 01:09:00",
+    "episode_end": "2018-03-02 03:53:00",
+    "peak_risk_score": 74.47,
+    "peak_risk_level": "HIGH",
+    "lead_lag_classification": "LEADING",
+    "sustained_tactics": [
+      "TA0043: Reconnaissance"
+    ],
+    "n_constituent_incidents": 165,
+    "raw_evidence_at_peak": {
+      "total_flows": 3555,
+      "benign_flows": 1494,
+      "attack_flows": 2061,
+      "attack_rate": 0.579746835443038
+    },
+    "phase1_source": "CIC-IDS2018 \u2014 Friday-02-03-2018",
+    "phase3_incidents": [
+      "INC-Friday-02-03-2018-00000-f1741335",
+      "INC-Friday-02-03-2018-00001-03876c20",
+      "INC-Friday-02-03-2018-00002-b1f77532",
+      "INC-Friday-02-03-2018-00003-2cc8f541",
+      "INC-Friday-02-03-2018-00004-de3f3833"
+    ],
+    "phase4_episode": "EP-Friday-02-03-2018-02b744",
+    "phase5_memory_mode": "SHALLOW \u2014 context only, no calibration",
+    "phase6_simulation": "SIM-00C38EDB"
+  }
+}

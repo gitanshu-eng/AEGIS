@@ -1,5 +1,5 @@
 ﻿import React, { useEffect, useState } from "react";
-import { API } from "../../api/client";
+import { API, API_KEY } from "../../api/client";
 import { Database, Clock, Shield, Activity } from "lucide-react";
 
 interface MemoryRecord {
@@ -27,7 +27,7 @@ export const MemoryViewer: React.FC<MemoryViewerProps> = ({ dataset }) => {
     setLoading(true);
     setError(null);
     fetch(`${API}/api/memory?dataset=${encodeURIComponent(dataset)}`, {
-      headers: { Accept: "application/json" },
+      headers: { Accept: "application/json", "X-API-Key": API_KEY },
     })
       .then((r) => {
         if (!r.ok) throw new Error(`HTTP ${r.status}`);
@@ -147,3 +147,4 @@ export const MemoryViewer: React.FC<MemoryViewerProps> = ({ dataset }) => {
     </div>
   );
 };
+

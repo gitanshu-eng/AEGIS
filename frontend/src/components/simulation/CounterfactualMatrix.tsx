@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+﻿import React, { useState, useEffect } from "react";
 import { History, Cpu, ShieldCheck, Loader2 } from "lucide-react";
-import { API } from "../../api/client";
+import { API, API_KEY } from "../../api/client";
 
 interface SimulationRecord {
   simulation_id: string;
@@ -46,7 +46,7 @@ export const CounterfactualMatrix: React.FC<Props> = ({
     setLoadingSim(true);
     setSimError(null);
     fetch(`${API}/api/simulations?dataset=${encodeURIComponent(dataset)}`, {
-      headers: { Accept: "application/json" },
+      headers: { Accept: "application/json", "X-API-Key": API_KEY },
     })
       .then((r) => r.json())
       .then((data: SimulationRecord[]) => {
@@ -60,7 +60,7 @@ export const CounterfactualMatrix: React.FC<Props> = ({
   useEffect(() => {
     setLoadingMem(true);
     fetch(`${API}/api/memory?dataset=${encodeURIComponent(dataset)}`, {
-      headers: { Accept: "application/json" },
+      headers: { Accept: "application/json", "X-API-Key": API_KEY },
     })
       .then((r) => r.json())
       .then((data: MemoryRecord[]) => setMemory(data))
@@ -243,3 +243,5 @@ export const CounterfactualMatrix: React.FC<Props> = ({
     </div>
   );
 };
+
+

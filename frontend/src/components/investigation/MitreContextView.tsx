@@ -1,5 +1,5 @@
 ﻿import { useEffect, useState } from "react";
-import { API } from "../../api/client";
+import { API, API_KEY } from "../../api/client";
 
 interface Episode {
   episode_id: string;
@@ -31,7 +31,7 @@ export default function MitreContextView({ dataset }: Props) {
   useEffect(() => {
     if (!dataset) return;
     setEpisodes([]); setSelected(null); setError(null);
-    fetch(`${API}/api/episodes?dataset=${encodeURIComponent(dataset)}`)
+    fetch(`${API}/api/episodes?dataset=${encodeURIComponent(dataset)}`, { headers: { "X-API-Key": API_KEY } })
       .then(r => r.json())
       .then(setEpisodes)
       .catch(e => setError(e.message));

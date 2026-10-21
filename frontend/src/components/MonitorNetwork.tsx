@@ -1,5 +1,5 @@
 ﻿import { useEffect, useState } from "react";
-import { API } from "../api/client";
+import { API, API_KEY } from "../api/client";
 
 interface NetworkRow {
   timestamp: string;
@@ -105,3 +105,5 @@ export default function MonitorNetwork({ dataset }: Props) {
     </div>
   );
 }
+
+

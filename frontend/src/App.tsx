@@ -23,6 +23,18 @@ import type { KPISummary, NetworkTimelinePoint, InvestigationEpisode } from "./t
 
 const MAX_TIMELINE_POINTS = 500;
 
+// Render cold-start guard — polls /api/health until backend is awake
+async function waitForBackend(apiBase: string, maxWaitMs = 30000): Promise<void> {
+  const start = Date.now();
+  while (Date.now() - start < maxWaitMs) {
+    try {
+      const res = await fetch(`${apiBase}/api/health`, { signal: AbortSignal.timeout(4000) });
+      if (res.ok) return;
+    } catch (_) {}
+    await new Promise(r => setTimeout(r, 2000));
+  }
+}
+
 export default function App() {
   const { currentNav, selectedDataset, selectedEpisodeId } = useAegisStore();
   const [kpi, setKpi] = useState<KPISummary | null>(null);
@@ -30,9 +42,17 @@ export default function App() {
   const [episodes, setEpisodes] = useState<InvestigationEpisode[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [livePoint, setLivePoint] = useState<NetworkTimelinePoint | null>(null);
+  const [backendReady, setBackendReady] = useState(false);
+
+  // Wake backend on mount
+  useEffect(() => {
+    const base = (import.meta as any).env?.VITE_API_URL ?? 'https://aegis-api-hqnx.onrender.com';
+    waitForBackend(base).then(() => setBackendReady(true));
+  }, []);
 
   // Initial full load when dataset changes
   useEffect(() => {
+    if (!backendReady) return;
     setLoading(true);
     Promise.all([
       fetchKPISummary(selectedDataset),
@@ -46,7 +66,7 @@ export default function App() {
       })
       .catch((err) => console.error(err))
       .finally(() => setLoading(false));
-  }, [selectedDataset]);
+  }, [selectedDataset, backendReady]);
 
   // Live tick — appends new point to timeline every 5 seconds + refreshes KPIs
   useLiveTick(selectedDataset, (point, mode) => {
@@ -126,7 +146,7 @@ export default function App() {
 
           {loading || !kpi ? (
             <div className="p-8 text-center text-xs font-mono text-slate-500 animate-pulse">
-              Querying AEGIS Telemetry Engine...
+              {!backendReady ? "Waking AEGIS backend — Render cold start, may take 15–30s..." : "Querying AEGIS Telemetry Engine..."}
             </div>
           ) : (
             <>

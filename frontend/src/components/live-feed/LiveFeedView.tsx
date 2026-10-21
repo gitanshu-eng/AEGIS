@@ -1,6 +1,6 @@
 ﻿import React, { useState, useEffect, useRef } from "react";
 import { Radio, Activity, Shield, Zap, RefreshCw } from "lucide-react";
-import { API } from "../../api/client";
+import { API, API_KEY } from "../../api/client";
 
 interface TickData {
   timestamp: string;
@@ -38,7 +38,7 @@ export const LiveFeedView: React.FC<{ dataset: string }> = ({ dataset }) => {
       try {
         const res = await fetch(
           `${API}/api/pcap/tick?name=${encodeURIComponent(dataset)}`,
-          { headers: { Accept: "application/json" } }
+          { headers: { Accept: "application/json", "X-API-Key": API_KEY } }
         );
         if (!res.ok) { setError(`HTTP ${res.status}`); return; }
         const data = await res.json() as any;
@@ -169,3 +169,5 @@ export const LiveFeedView: React.FC<{ dataset: string }> = ({ dataset }) => {
     </div>
   );
 };
+
+

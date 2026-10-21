@@ -30,8 +30,8 @@ interface Props {
 }
 
 export const CounterfactualMatrix: React.FC<Props> = ({
-  episodeId,
-  baselineRisk,
+  episodeId: _episodeId,
+  baselineRisk: _baselineRisk,
   dataset = "cic_ids2017",
 }) => {
   const [simulations, setSimulations] = useState<SimulationRecord[]>([]);

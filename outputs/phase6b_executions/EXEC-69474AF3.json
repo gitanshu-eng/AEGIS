@@ -1,0 +1,23 @@
+{
+  "execution_id": "EXEC-69474AF3",
+  "source_simulation_id": "SIM-59EA64F7",
+  "execution_mode": "SIMULATED",
+  "authorization": {
+    "soc_authorized": true,
+    "timestamp": "2026-10-03T19:51:47.554123+00:00"
+  },
+  "infrastructure_payload": {
+    "api_target": "https://mock-soar.local/api/v1/intervene/host_isolation",
+    "action": "HOST_ISOLATION",
+    "target_identifiers": [],
+    "timestamp": "2026-10-03T19:51:47.554060+00:00",
+    "dry_run": true
+  },
+  "verification_metrics": {
+    "predicted_risk_score": 36.7975,
+    "simulated_observed_risk_score": 37.378,
+    "prediction_error": 0.5805,
+    "accuracy_note": "Positive error means the intervention was less effective than predicted. Negative means more effective."
+  },
+  "memory_calibration_status": "PENDING_LIVE_DATA \u2014 SIMULATED_OBSERVED outcomes must not poison Phase 5 verified memory."
+}

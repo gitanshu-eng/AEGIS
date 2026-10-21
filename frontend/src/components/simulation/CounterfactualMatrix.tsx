@@ -1,5 +1,6 @@
-﻿import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { History, Cpu, ShieldCheck, Loader2 } from "lucide-react";
+import { API } from "../../api/client";
 
 interface SimulationRecord {
   simulation_id: string;
@@ -44,7 +45,7 @@ export const CounterfactualMatrix: React.FC<Props> = ({
   useEffect(() => {
     setLoadingSim(true);
     setSimError(null);
-    fetch(`http://localhost:8000/api/simulations?dataset=${encodeURIComponent(dataset)}`, {
+    fetch(`${API}/api/simulations?dataset=${encodeURIComponent(dataset)}`, {
       headers: { Accept: "application/json" },
     })
       .then((r) => r.json())
@@ -58,7 +59,7 @@ export const CounterfactualMatrix: React.FC<Props> = ({
 
   useEffect(() => {
     setLoadingMem(true);
-    fetch(`http://localhost:8000/api/memory?dataset=${encodeURIComponent(dataset)}`, {
+    fetch(`${API}/api/memory?dataset=${encodeURIComponent(dataset)}`, {
       headers: { Accept: "application/json" },
     })
       .then((r) => r.json())
@@ -222,7 +223,7 @@ export const CounterfactualMatrix: React.FC<Props> = ({
                     <strong className="text-rose-400">
                       {activeSim.baseline_risk?.toFixed(1)}
                     </strong>{" "}
-                    → Expected Post-Mitigation:{" "}
+                    ? Expected Post-Mitigation:{" "}
                     <strong className="text-cyan-300">
                       {activeSim.simulated_risk?.toFixed(1)}
                     </strong>
@@ -231,7 +232,7 @@ export const CounterfactualMatrix: React.FC<Props> = ({
                 <div className="flex items-center gap-1.5 text-emerald-400 text-xs font-bold">
                   <ShieldCheck className="w-4 h-4" />
                   <span>
-                    Δ {activeSim.delta != null ? activeSim.delta.toFixed(2) : "-"} Points
+                    ? {activeSim.delta != null ? activeSim.delta.toFixed(2) : "-"} Points
                   </span>
                 </div>
               </div>

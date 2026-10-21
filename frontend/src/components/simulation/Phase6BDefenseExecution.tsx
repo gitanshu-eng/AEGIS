@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   ShieldAlert, 
   Terminal, 
@@ -9,6 +9,7 @@ import {
   Info,
   X
 } from 'lucide-react';
+import { API } from "../../api/client";
 
 interface Phase6BDefenseExecutionProps {
   baselineRisk?: number;
@@ -85,7 +86,7 @@ const VerificationTracker: React.FC<{ dataset: string }> = ({ dataset }) => {
   useEffect(() => {
     if (!dataset) return;
     setLoading(true);
-    fetch(`http://localhost:8000/api/verifications?dataset=${encodeURIComponent(dataset)}`, {
+    fetch(`${API}/api/verifications?dataset=${encodeURIComponent(dataset)}`, {
       headers: { Accept: 'application/json' },
     })
       .then((r) => r.json())
@@ -109,7 +110,7 @@ const VerificationTracker: React.FC<{ dataset: string }> = ({ dataset }) => {
   return (
     <div className="bg-slate-900/80 border border-slate-800 rounded-lg p-4 space-y-3">
       <h3 className="text-xs font-mono font-bold uppercase tracking-wider text-slate-300 mb-3">
-        Phase 6B Live Defense State Tracker — {records.length} Records
+        Phase 6B Live Defense State Tracker � {records.length} Records
       </h3>
       {records.map((rec, idx) => {
         const activeIndex = STATE_MACHINE.indexOf(
@@ -393,3 +394,4 @@ export const Phase6BDefenseExecution: React.FC<Phase6BDefenseExecutionProps> = (
     </div>
   );
 };
+

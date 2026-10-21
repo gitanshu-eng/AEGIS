@@ -1,5 +1,6 @@
-ï»¿import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Database, Clock, Shield, Activity } from "lucide-react";
+import { API } from "../../api/client";
 
 interface MemoryRecord {
   id: string;
@@ -25,7 +26,7 @@ export const MemoryViewer: React.FC<MemoryViewerProps> = ({ dataset }) => {
     if (!dataset) return;
     setLoading(true);
     setError(null);
-    fetch(`http://localhost:8000/api/memory?dataset=${encodeURIComponent(dataset)}`, {
+    fetch(`${API}/api/memory?dataset=${encodeURIComponent(dataset)}`, {
       headers: { Accept: "application/json" },
     })
       .then((r) => {
@@ -70,10 +71,10 @@ export const MemoryViewer: React.FC<MemoryViewerProps> = ({ dataset }) => {
         </div>
         <div>
           <h2 className="text-sm font-bold text-white font-mono tracking-wide">
-            PHASE 5 â€” HISTORICAL EPISODE MEMORY
+            PHASE 5 — HISTORICAL EPISODE MEMORY
           </h2>
           <p className="text-xs text-slate-400 mt-0.5">
-            {records.length} memory records loaded â€¢ Source: phase5_memory_store.json â€¢ Data: HISTORICAL BATCH
+            {records.length} memory records loaded • Source: phase5_memory_store.json • Data: HISTORICAL BATCH
           </p>
         </div>
       </div>

@@ -1,7 +1,10 @@
-﻿import { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import type { NetworkTimelinePoint } from "../types/aegis";
 
 const POLL_INTERVAL_MS = 5000;
+
+const API_BASE = import.meta.env.VITE_API_URL?.replace(/\/$/, "")
+  ?? (import.meta.env.DEV ? "http://localhost:8000" : "https://aegis-api-hqnx.onrender.com");
 
 export function useLiveTick(
   dataset: string,
@@ -21,7 +24,7 @@ export function useLiveTick(
 
         try {
           const pcapRes = await fetch(
-            `http://localhost:8000/api/pcap/tick?name=${encodeURIComponent(dataset)}`,
+            `${API_BASE}/api/pcap/tick?name=${encodeURIComponent(dataset)}`,
             { headers: { Accept: "application/json" } }
           );
           if (pcapRes.ok) {
@@ -35,7 +38,7 @@ export function useLiveTick(
 
         if (!data) {
           const res = await fetch(
-            `http://localhost:8000/api/live/tick?dataset=${encodeURIComponent(dataset)}`,
+            `${API_BASE}/api/live/tick?dataset=${encodeURIComponent(dataset)}`,
             { headers: { Accept: "application/json" } }
           );
           if (!res.ok) return;

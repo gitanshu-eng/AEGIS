@@ -8,6 +8,7 @@ import { DatasetWorkspace } from "./components/dataset-workspace/DatasetWorkspac
 import { LiveLabWorkspace } from "./components/live-lab/LiveLabWorkspace";
 import { ScenarioRunnerBanner } from "./components/pipeline/ScenarioRunner";
 import { PipelineExplorer } from "./components/pipeline/PipelineExplorer";
+import { ModelStatus } from "./components/pipeline/ModelStatus";
 import { CounterfactualMatrix } from "./components/simulation/CounterfactualMatrix";
 import { Phase6BDefenseExecution } from "./components/simulation/Phase6BDefenseExecution";
 import { useAegisStore } from "./context/useAegisStore";
@@ -218,8 +219,8 @@ export default function App() {
                 <LiveFeedView dataset={selectedDataset} />
               )}
 
-              {(currentNav === "SYSTEM_PIPELINE" ||
-                currentNav === "SYSTEM_MODELS") && <PipelineExplorer />}
+              {currentNav === "SYSTEM_PIPELINE" && <PipelineExplorer />}
+               {currentNav === "SYSTEM_MODELS" && <ModelStatus />}
             </>
           )}
         </main>

@@ -17,6 +17,7 @@ import MonitorNetwork from "./components/MonitorNetwork";
 import MonitorForecast from "./components/MonitorForecast";
 import MonitorRisk from "./components/MonitorRisk";
 import MitreContextView from "./components/investigation/MitreContextView";
+import { LiveFeedView } from "./components/live-feed/LiveFeedView";
 import { useLiveTick } from "./hooks/useLiveTick";
 import type { KPISummary, NetworkTimelinePoint, InvestigationEpisode } from "./types/aegis";
 
@@ -192,6 +193,10 @@ export default function App() {
               )}
 
               {currentNav === "VERIFY_OUTCOMES" && <LiveLabWorkspace />}
+
+              {currentNav === "LIVE_FEED" && (
+                <LiveFeedView dataset={selectedDataset} />
+              )}
 
               {(currentNav === "SYSTEM_PIPELINE" ||
                 currentNav === "SYSTEM_MODELS") && <PipelineExplorer />}

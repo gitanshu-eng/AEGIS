@@ -1,6 +1,7 @@
 ﻿import React from 'react';
 import {
   Home,
+  Radio,
   Network,
   TrendingUp,
   Shield,
@@ -35,6 +36,7 @@ const MENU_GROUPS: MenuGroup[] = [
       { id: 'MONITOR_NETWORK', label: 'Network State', icon: Network },
       { id: 'MONITOR_FORECAST', label: 'Forecast', icon: TrendingUp },
       { id: 'MONITOR_RISK', label: 'Risk', icon: Shield },
+      { id: 'LIVE_FEED', label: 'Live Feed', icon: Radio },
     ],
   },
   {

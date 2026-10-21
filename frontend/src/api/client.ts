@@ -1,9 +1,10 @@
 ﻿import type { KPISummary, NetworkTimelinePoint, InvestigationEpisode } from '../types/aegis';
 
 export const API = (import.meta as any).env?.VITE_API_URL ?? 'http://localhost:8000';
+export const API_KEY = (import.meta as any).env?.VITE_API_KEY ?? 'dev-insecure-key';
 
 async function get<T>(path: string): Promise<T> {
-  const res = await fetch(`${API}${path}`, { headers: { Accept: 'application/json' } });
+  const res = await fetch(`${API}${path}`, { headers: { Accept: 'application/json', 'X-API-Key': API_KEY } });
   if (!res.ok) {
     const body = await res.text().catch(() => res.statusText);
     throw new Error(`[${res.status}] ${path}: ${body}`);
@@ -128,3 +129,4 @@ export async function fetchEpisodes(dataset: string): Promise<InvestigationEpiso
     } as InvestigationEpisode;
   });
 }
+

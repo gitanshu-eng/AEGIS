@@ -1,0 +1,923 @@
+[
+  {
+    "episode_id": "EP-cic_ids2018_mar01-f8a3d7",
+    "dataset": "cic_ids2018_mar01",
+    "investigation_state": "NEW",
+    "temporal_bounds": {
+      "start_time": "2017-07-04 02:36:00",
+      "end_time": "2017-07-04 02:38:00",
+      "duration_minutes": 3
+    },
+    "risk_profile": {
+      "peak_risk_score": 33.33,
+      "peak_risk_level": "MEDIUM"
+    },
+    "dominant_signal_at_peak": "Forecast",
+    "forecast_behavior": {
+      "classification": "BREACH_ONLY_NO_FORECAST",
+      "lead_time_minutes": 0,
+      "f_time": null,
+      "b_time": "2017-07-04 02:36:00"
+    },
+    "candidate_mitre_summary": {
+      "sustained_tactics": [
+        "TA0008: Lateral Movement",
+        "TA0043: Reconnaissance"
+      ],
+      "sustained_techniques": [
+        "T1210: Exploitation of Remote Services",
+        "T1595: Active Scanning"
+      ]
+    },
+    "raw_evidence_at_peak": {
+      "total_flows": 385,
+      "benign_flows": 290,
+      "attack_flows": 95,
+      "attack_rate": 0.2467532467532467
+    },
+    "investigation_summary": "Investigation Episode EP-cic_ids2018_mar01-f8a3d7 spans 3 minutes, peaking at a MEDIUM risk state (Score: 33.33). The dominant kinematic driver at peak was Forecast. Sustained MITRE ATT&CK behaviors: TA0008: Lateral Movement, TA0043: Reconnaissance. Physical evidence at peak: 24.7% attack rate. Prediction vs. Reality: Forecast was BREACH_ONLY_NO_FORECAST (Lead time: 0 min).",
+    "constituent_incident_ids": [
+      "INC-cic_ids2018_mar01-00546-8146c723",
+      "INC-cic_ids2018_mar01-00547-a5174841",
+      "INC-cic_ids2018_mar01-00548-4b50c3b6"
+    ]
+  },
+  {
+    "episode_id": "EP-cic_ids2018_mar01-735d29",
+    "dataset": "cic_ids2018_mar01",
+    "investigation_state": "NEW",
+    "temporal_bounds": {
+      "start_time": "2017-07-04 02:55:00",
+      "end_time": "2017-07-04 02:56:00",
+      "duration_minutes": 2
+    },
+    "risk_profile": {
+      "peak_risk_score": 38.46,
+      "peak_risk_level": "MEDIUM"
+    },
+    "dominant_signal_at_peak": "Persistence",
+    "forecast_behavior": {
+      "classification": "BREACH_ONLY_NO_FORECAST",
+      "lead_time_minutes": 0,
+      "f_time": null,
+      "b_time": "2017-07-04 02:55:00"
+    },
+    "candidate_mitre_summary": {
+      "sustained_tactics": [
+        "TA0043: Reconnaissance"
+      ],
+      "sustained_techniques": [
+        "T1595: Active Scanning"
+      ]
+    },
+    "raw_evidence_at_peak": {
+      "total_flows": 282,
+      "benign_flows": 187,
+      "attack_flows": 95,
+      "attack_rate": 0.3368794326241134
+    },
+    "investigation_summary": "Investigation Episode EP-cic_ids2018_mar01-735d29 spans 2 minutes, peaking at a MEDIUM risk state (Score: 38.46). The dominant kinematic driver at peak was Persistence. Sustained MITRE ATT&CK behaviors: TA0043: Reconnaissance. Physical evidence at peak: 33.7% attack rate. Prediction vs. Reality: Forecast was BREACH_ONLY_NO_FORECAST (Lead time: 0 min).",
+    "constituent_incident_ids": [
+      "INC-cic_ids2018_mar01-00565-b6063db3",
+      "INC-cic_ids2018_mar01-00566-efc9b981"
+    ]
+  },
+  {
+    "episode_id": "EP-cic_ids2018_mar01-0c53d2",
+    "dataset": "cic_ids2018_mar01",
+    "investigation_state": "NEW",
+    "temporal_bounds": {
+      "start_time": "2017-07-04 03:01:00",
+      "end_time": "2017-07-04 03:02:00",
+      "duration_minutes": 2
+    },
+    "risk_profile": {
+      "peak_risk_score": 39.35,
+      "peak_risk_level": "MEDIUM"
+    },
+    "dominant_signal_at_peak": "Persistence",
+    "forecast_behavior": {
+      "classification": "INDETERMINATE",
+      "lead_time_minutes": 0,
+      "f_time": null,
+      "b_time": null
+    },
+    "candidate_mitre_summary": {
+      "sustained_tactics": [
+        "TA0043: Reconnaissance"
+      ],
+      "sustained_techniques": [
+        "T1595: Active Scanning"
+      ]
+    },
+    "raw_evidence_at_peak": {
+      "total_flows": 499,
+      "benign_flows": 404,
+      "attack_flows": 95,
+      "attack_rate": 0.1903807615230461
+    },
+    "investigation_summary": "Investigation Episode EP-cic_ids2018_mar01-0c53d2 spans 2 minutes, peaking at a MEDIUM risk state (Score: 39.35). The dominant kinematic driver at peak was Persistence. Sustained MITRE ATT&CK behaviors: TA0043: Reconnaissance. Physical evidence at peak: 19.0% attack rate. Prediction vs. Reality: Forecast was INDETERMINATE (Lead time: 0 min).",
+    "constituent_incident_ids": [
+      "INC-cic_ids2018_mar01-00571-44e91a12",
+      "INC-cic_ids2018_mar01-00572-ca29bdba"
+    ]
+  },
+  {
+    "episode_id": "EP-cic_ids2018_mar01-2eb2ad",
+    "dataset": "cic_ids2018_mar01",
+    "investigation_state": "NEW",
+    "temporal_bounds": {
+      "start_time": "2017-07-04 03:10:00",
+      "end_time": "2017-07-04 03:10:00",
+      "duration_minutes": 1
+    },
+    "risk_profile": {
+      "peak_risk_score": 44.06,
+      "peak_risk_level": "MEDIUM"
+    },
+    "dominant_signal_at_peak": "Forecast",
+    "forecast_behavior": {
+      "classification": "BREACH_ONLY_NO_FORECAST",
+      "lead_time_minutes": 0,
+      "f_time": null,
+      "b_time": "2017-07-04 03:10:00"
+    },
+    "candidate_mitre_summary": {
+      "sustained_tactics": [
+        "TA0043: Reconnaissance"
+      ],
+      "sustained_techniques": [
+        "T1595: Active Scanning"
+      ]
+    },
+    "raw_evidence_at_peak": {
+      "total_flows": 424,
+      "benign_flows": 327,
+      "attack_flows": 97,
+      "attack_rate": 0.2287735849056603
+    },
+    "investigation_summary": "Investigation Episode EP-cic_ids2018_mar01-2eb2ad spans 1 minutes, peaking at a MEDIUM risk state (Score: 44.06). The dominant kinematic driver at peak was Forecast. Sustained MITRE ATT&CK behaviors: TA0043: Reconnaissance. Physical evidence at peak: 22.9% attack rate. Prediction vs. Reality: Forecast was BREACH_ONLY_NO_FORECAST (Lead time: 0 min).",
+    "constituent_incident_ids": [
+      "INC-cic_ids2018_mar01-00580-3f4b23b9"
+    ]
+  },
+  {
+    "episode_id": "EP-cic_ids2018_mar01-364bba",
+    "dataset": "cic_ids2018_mar01",
+    "investigation_state": "NEW",
+    "temporal_bounds": {
+      "start_time": "2017-07-04 09:28:00",
+      "end_time": "2017-07-04 09:28:00",
+      "duration_minutes": 1
+    },
+    "risk_profile": {
+      "peak_risk_score": 34.38,
+      "peak_risk_level": "MEDIUM"
+    },
+    "dominant_signal_at_peak": "Persistence",
+    "forecast_behavior": {
+      "classification": "BREACH_ONLY_NO_FORECAST",
+      "lead_time_minutes": 0,
+      "f_time": null,
+      "b_time": "2017-07-04 09:28:00"
+    },
+    "candidate_mitre_summary": {
+      "sustained_tactics": [
+        "TA0008: Lateral Movement"
+      ],
+      "sustained_techniques": [
+        "T1210: Exploitation of Remote Services"
+      ]
+    },
+    "raw_evidence_at_peak": {
+      "total_flows": 526,
+      "benign_flows": 390,
+      "attack_flows": 136,
+      "attack_rate": 0.2585551330798479
+    },
+    "investigation_summary": "Investigation Episode EP-cic_ids2018_mar01-364bba spans 1 minutes, peaking at a MEDIUM risk state (Score: 34.38). The dominant kinematic driver at peak was Persistence. Sustained MITRE ATT&CK behaviors: TA0008: Lateral Movement. Physical evidence at peak: 25.9% attack rate. Prediction vs. Reality: Forecast was BREACH_ONLY_NO_FORECAST (Lead time: 0 min).",
+    "constituent_incident_ids": [
+      "INC-cic_ids2018_mar01-00712-6cc0162f"
+    ]
+  },
+  {
+    "episode_id": "EP-cic_ids2018_mar01-785b0b",
+    "dataset": "cic_ids2018_mar01",
+    "investigation_state": "NEW",
+    "temporal_bounds": {
+      "start_time": "2017-07-04 09:39:00",
+      "end_time": "2017-07-04 09:41:00",
+      "duration_minutes": 3
+    },
+    "risk_profile": {
+      "peak_risk_score": 32.97,
+      "peak_risk_level": "MEDIUM"
+    },
+    "dominant_signal_at_peak": "Persistence",
+    "forecast_behavior": {
+      "classification": "INDETERMINATE",
+      "lead_time_minutes": 0,
+      "f_time": null,
+      "b_time": null
+    },
+    "candidate_mitre_summary": {
+      "sustained_tactics": [
+        "TA0043: Reconnaissance"
+      ],
+      "sustained_techniques": [
+        "T1595: Active Scanning"
+      ]
+    },
+    "raw_evidence_at_peak": {
+      "total_flows": 896,
+      "benign_flows": 759,
+      "attack_flows": 137,
+      "attack_rate": 0.1529017857142857
+    },
+    "investigation_summary": "Investigation Episode EP-cic_ids2018_mar01-785b0b spans 3 minutes, peaking at a MEDIUM risk state (Score: 32.97). The dominant kinematic driver at peak was Persistence. Sustained MITRE ATT&CK behaviors: TA0043: Reconnaissance. Physical evidence at peak: 15.3% attack rate. Prediction vs. Reality: Forecast was INDETERMINATE (Lead time: 0 min).",
+    "constituent_incident_ids": [
+      "INC-cic_ids2018_mar01-00723-40ec3cab",
+      "INC-cic_ids2018_mar01-00724-df706ef6",
+      "INC-cic_ids2018_mar01-00725-f3bf3475"
+    ]
+  },
+  {
+    "episode_id": "EP-cic_ids2018_mar01-8d227e",
+    "dataset": "cic_ids2018_mar01",
+    "investigation_state": "NEW",
+    "temporal_bounds": {
+      "start_time": "2017-07-04 10:07:00",
+      "end_time": "2017-07-04 10:07:00",
+      "duration_minutes": 1
+    },
+    "risk_profile": {
+      "peak_risk_score": 30.35,
+      "peak_risk_level": "MEDIUM"
+    },
+    "dominant_signal_at_peak": "Persistence",
+    "forecast_behavior": {
+      "classification": "INDETERMINATE",
+      "lead_time_minutes": 0,
+      "f_time": null,
+      "b_time": null
+    },
+    "candidate_mitre_summary": {
+      "sustained_tactics": [
+        "TA0043: Reconnaissance"
+      ],
+      "sustained_techniques": [
+        "T1595: Active Scanning"
+      ]
+    },
+    "raw_evidence_at_peak": {
+      "total_flows": 794,
+      "benign_flows": 669,
+      "attack_flows": 125,
+      "attack_rate": 0.1574307304785894
+    },
+    "investigation_summary": "Investigation Episode EP-cic_ids2018_mar01-8d227e spans 1 minutes, peaking at a MEDIUM risk state (Score: 30.35). The dominant kinematic driver at peak was Persistence. Sustained MITRE ATT&CK behaviors: TA0043: Reconnaissance. Physical evidence at peak: 15.7% attack rate. Prediction vs. Reality: Forecast was INDETERMINATE (Lead time: 0 min).",
+    "constituent_incident_ids": [
+      "INC-cic_ids2018_mar01-00751-0880ec78"
+    ]
+  },
+  {
+    "episode_id": "EP-cic_ids2018_mar01-3ea5a0",
+    "dataset": "cic_ids2018_mar01",
+    "investigation_state": "NEW",
+    "temporal_bounds": {
+      "start_time": "2017-07-04 10:16:00",
+      "end_time": "2017-07-04 10:18:00",
+      "duration_minutes": 3
+    },
+    "risk_profile": {
+      "peak_risk_score": 47.25,
+      "peak_risk_level": "MEDIUM"
+    },
+    "dominant_signal_at_peak": "Persistence",
+    "forecast_behavior": {
+      "classification": "BREACH_ONLY_NO_FORECAST",
+      "lead_time_minutes": 0,
+      "f_time": null,
+      "b_time": "2017-07-04 10:18:00"
+    },
+    "candidate_mitre_summary": {
+      "sustained_tactics": [
+        "TA0043: Reconnaissance"
+      ],
+      "sustained_techniques": [
+        "T1595: Active Scanning"
+      ]
+    },
+    "raw_evidence_at_peak": {
+      "total_flows": 428,
+      "benign_flows": 290,
+      "attack_flows": 138,
+      "attack_rate": 0.322429906542056
+    },
+    "investigation_summary": "Investigation Episode EP-cic_ids2018_mar01-3ea5a0 spans 3 minutes, peaking at a MEDIUM risk state (Score: 47.25). The dominant kinematic driver at peak was Persistence. Sustained MITRE ATT&CK behaviors: TA0043: Reconnaissance. Physical evidence at peak: 32.2% attack rate. Prediction vs. Reality: Forecast was BREACH_ONLY_NO_FORECAST (Lead time: 0 min).",
+    "constituent_incident_ids": [
+      "INC-cic_ids2018_mar01-00760-678c6194",
+      "INC-cic_ids2018_mar01-00761-f1567bbd",
+      "INC-cic_ids2018_mar01-00762-f4515ffc"
+    ]
+  },
+  {
+    "episode_id": "EP-cic_ids2018_mar01-9b7934",
+    "dataset": "cic_ids2018_mar01",
+    "investigation_state": "NEW",
+    "temporal_bounds": {
+      "start_time": "2017-07-05 09:48:00",
+      "end_time": "2017-07-05 09:48:00",
+      "duration_minutes": 1
+    },
+    "risk_profile": {
+      "peak_risk_score": 38.68,
+      "peak_risk_level": "MEDIUM"
+    },
+    "dominant_signal_at_peak": "Activity",
+    "forecast_behavior": {
+      "classification": "BREACH_ONLY_NO_FORECAST",
+      "lead_time_minutes": 0,
+      "f_time": null,
+      "b_time": "2017-07-05 09:48:00"
+    },
+    "candidate_mitre_summary": {
+      "sustained_tactics": [
+        "TA0043: Reconnaissance"
+      ],
+      "sustained_techniques": [
+        "T1595: Active Scanning"
+      ]
+    },
+    "raw_evidence_at_peak": {
+      "total_flows": 865,
+      "benign_flows": 542,
+      "attack_flows": 323,
+      "attack_rate": 0.3734104046242774
+    },
+    "investigation_summary": "Investigation Episode EP-cic_ids2018_mar01-9b7934 spans 1 minutes, peaking at a MEDIUM risk state (Score: 38.68). The dominant kinematic driver at peak was Activity. Sustained MITRE ATT&CK behaviors: TA0043: Reconnaissance. Physical evidence at peak: 37.3% attack rate. Prediction vs. Reality: Forecast was BREACH_ONLY_NO_FORECAST (Lead time: 0 min).",
+    "constituent_incident_ids": [
+      "INC-cic_ids2018_mar01-01213-6ad4c31a"
+    ]
+  },
+  {
+    "episode_id": "EP-cic_ids2018_mar01-74d6f9",
+    "dataset": "cic_ids2018_mar01",
+    "investigation_state": "NEW",
+    "temporal_bounds": {
+      "start_time": "2017-07-05 09:52:00",
+      "end_time": "2017-07-05 10:10:00",
+      "duration_minutes": 19
+    },
+    "risk_profile": {
+      "peak_risk_score": 54.58,
+      "peak_risk_level": "MEDIUM"
+    },
+    "dominant_signal_at_peak": "Activity",
+    "forecast_behavior": {
+      "classification": "LAGGING",
+      "lead_time_minutes": -7,
+      "f_time": "2017-07-05 09:59:00",
+      "b_time": "2017-07-05 09:52:00"
+    },
+    "candidate_mitre_summary": {
+      "sustained_tactics": [
+        "TA0043: Reconnaissance"
+      ],
+      "sustained_techniques": [
+        "T1595: Active Scanning"
+      ]
+    },
+    "raw_evidence_at_peak": {
+      "total_flows": 680,
+      "benign_flows": 343,
+      "attack_flows": 337,
+      "attack_rate": 0.4955882352941176
+    },
+    "investigation_summary": "Investigation Episode EP-cic_ids2018_mar01-74d6f9 spans 19 minutes, peaking at a MEDIUM risk state (Score: 54.58). The dominant kinematic driver at peak was Activity. Sustained MITRE ATT&CK behaviors: TA0043: Reconnaissance. Physical evidence at peak: 49.6% attack rate. Prediction vs. Reality: Forecast was LAGGING (Lead time: -7 min).",
+    "constituent_incident_ids": [
+      "INC-cic_ids2018_mar01-01217-3ade6ce2",
+      "INC-cic_ids2018_mar01-01218-3b0d0464",
+      "INC-cic_ids2018_mar01-01219-5c4626af",
+      "INC-cic_ids2018_mar01-01220-9c11c402",
+      "INC-cic_ids2018_mar01-01221-96d4cda0",
+      "INC-cic_ids2018_mar01-01222-50f9a680",
+      "INC-cic_ids2018_mar01-01223-bbe38196",
+      "INC-cic_ids2018_mar01-01224-9188d7da",
+      "INC-cic_ids2018_mar01-01225-518bfc01",
+      "INC-cic_ids2018_mar01-01226-04d6b228",
+      "INC-cic_ids2018_mar01-01227-666ef179",
+      "INC-cic_ids2018_mar01-01228-0fa0099e",
+      "INC-cic_ids2018_mar01-01229-0c3e9af2",
+      "INC-cic_ids2018_mar01-01230-ef337527",
+      "INC-cic_ids2018_mar01-01231-d7b6303d",
+      "INC-cic_ids2018_mar01-01232-99a1f1d6",
+      "INC-cic_ids2018_mar01-01233-b17515d6",
+      "INC-cic_ids2018_mar01-01234-b9dc4296",
+      "INC-cic_ids2018_mar01-01235-f09d8e49"
+    ]
+  },
+  {
+    "episode_id": "EP-cic_ids2018_mar01-cb0951",
+    "dataset": "cic_ids2018_mar01",
+    "investigation_state": "NEW",
+    "temporal_bounds": {
+      "start_time": "2017-07-05 10:15:00",
+      "end_time": "2017-07-05 10:15:00",
+      "duration_minutes": 1
+    },
+    "risk_profile": {
+      "peak_risk_score": 42.55,
+      "peak_risk_level": "MEDIUM"
+    },
+    "dominant_signal_at_peak": "Forecast",
+    "forecast_behavior": {
+      "classification": "SIMULTANEOUS",
+      "lead_time_minutes": 0,
+      "f_time": "2017-07-05 10:15:00",
+      "b_time": "2017-07-05 10:15:00"
+    },
+    "candidate_mitre_summary": {
+      "sustained_tactics": [
+        "TA0043: Reconnaissance"
+      ],
+      "sustained_techniques": [
+        "T1595: Active Scanning"
+      ]
+    },
+    "raw_evidence_at_peak": {
+      "total_flows": 3522,
+      "benign_flows": 2511,
+      "attack_flows": 1011,
+      "attack_rate": 0.2870528109028961
+    },
+    "investigation_summary": "Investigation Episode EP-cic_ids2018_mar01-cb0951 spans 1 minutes, peaking at a MEDIUM risk state (Score: 42.55). The dominant kinematic driver at peak was Forecast. Sustained MITRE ATT&CK behaviors: TA0043: Reconnaissance. Physical evidence at peak: 28.7% attack rate. Prediction vs. Reality: Forecast was SIMULTANEOUS (Lead time: 0 min).",
+    "constituent_incident_ids": [
+      "INC-cic_ids2018_mar01-01240-a7cbd5e1"
+    ]
+  },
+  {
+    "episode_id": "EP-cic_ids2018_mar01-64c696",
+    "dataset": "cic_ids2018_mar01",
+    "investigation_state": "NEW",
+    "temporal_bounds": {
+      "start_time": "2017-07-05 10:19:00",
+      "end_time": "2017-07-05 10:26:00",
+      "duration_minutes": 8
+    },
+    "risk_profile": {
+      "peak_risk_score": 65.81,
+      "peak_risk_level": "HIGH"
+    },
+    "dominant_signal_at_peak": "Activity",
+    "forecast_behavior": {
+      "classification": "SIMULTANEOUS",
+      "lead_time_minutes": 0,
+      "f_time": "2017-07-05 10:19:00",
+      "b_time": "2017-07-05 10:19:00"
+    },
+    "candidate_mitre_summary": {
+      "sustained_tactics": [
+        "TA0043: Reconnaissance"
+      ],
+      "sustained_techniques": [
+        "T1595: Active Scanning"
+      ]
+    },
+    "raw_evidence_at_peak": {
+      "total_flows": 1482,
+      "benign_flows": 456,
+      "attack_flows": 1026,
+      "attack_rate": 0.6923076923076923
+    },
+    "investigation_summary": "Investigation Episode EP-cic_ids2018_mar01-64c696 spans 8 minutes, peaking at a HIGH risk state (Score: 65.81). The dominant kinematic driver at peak was Activity. Sustained MITRE ATT&CK behaviors: TA0043: Reconnaissance. Physical evidence at peak: 69.2% attack rate. Prediction vs. Reality: Forecast was SIMULTANEOUS (Lead time: 0 min).",
+    "constituent_incident_ids": [
+      "INC-cic_ids2018_mar01-01244-ba6b6941",
+      "INC-cic_ids2018_mar01-01245-5029881a",
+      "INC-cic_ids2018_mar01-01246-3ecb7893",
+      "INC-cic_ids2018_mar01-01247-622530d9",
+      "INC-cic_ids2018_mar01-01248-75c28eea",
+      "INC-cic_ids2018_mar01-01249-c0addd57",
+      "INC-cic_ids2018_mar01-01250-113439b9",
+      "INC-cic_ids2018_mar01-01251-fac75120"
+    ]
+  },
+  {
+    "episode_id": "EP-cic_ids2018_mar01-0ff2fb",
+    "dataset": "cic_ids2018_mar01",
+    "investigation_state": "NEW",
+    "temporal_bounds": {
+      "start_time": "2017-07-05 10:32:00",
+      "end_time": "2017-07-05 10:33:00",
+      "duration_minutes": 2
+    },
+    "risk_profile": {
+      "peak_risk_score": 54.31,
+      "peak_risk_level": "MEDIUM"
+    },
+    "dominant_signal_at_peak": "Forecast",
+    "forecast_behavior": {
+      "classification": "SIMULTANEOUS",
+      "lead_time_minutes": 0,
+      "f_time": "2017-07-05 10:33:00",
+      "b_time": "2017-07-05 10:33:00"
+    },
+    "candidate_mitre_summary": {
+      "sustained_tactics": [
+        "TA0043: Reconnaissance"
+      ],
+      "sustained_techniques": [
+        "T1595: Active Scanning"
+      ]
+    },
+    "raw_evidence_at_peak": {
+      "total_flows": 2292,
+      "benign_flows": 1277,
+      "attack_flows": 1015,
+      "attack_rate": 0.4428446771378708
+    },
+    "investigation_summary": "Investigation Episode EP-cic_ids2018_mar01-0ff2fb spans 2 minutes, peaking at a MEDIUM risk state (Score: 54.31). The dominant kinematic driver at peak was Forecast. Sustained MITRE ATT&CK behaviors: TA0043: Reconnaissance. Physical evidence at peak: 44.3% attack rate. Prediction vs. Reality: Forecast was SIMULTANEOUS (Lead time: 0 min).",
+    "constituent_incident_ids": [
+      "INC-cic_ids2018_mar01-01257-4980b55c",
+      "INC-cic_ids2018_mar01-01258-38954ca7"
+    ]
+  },
+  {
+    "episode_id": "EP-cic_ids2018_mar01-d0b2f5",
+    "dataset": "cic_ids2018_mar01",
+    "investigation_state": "NEW",
+    "temporal_bounds": {
+      "start_time": "2017-07-05 10:43:00",
+      "end_time": "2017-07-05 11:00:00",
+      "duration_minutes": 18
+    },
+    "risk_profile": {
+      "peak_risk_score": 81.58,
+      "peak_risk_level": "CRITICAL"
+    },
+    "dominant_signal_at_peak": "Activity",
+    "forecast_behavior": {
+      "classification": "SIMULTANEOUS",
+      "lead_time_minutes": 0,
+      "f_time": "2017-07-05 10:43:00",
+      "b_time": "2017-07-05 10:43:00"
+    },
+    "candidate_mitre_summary": {
+      "sustained_tactics": [
+        "TA0040: Impact"
+      ],
+      "sustained_techniques": [
+        "T1498: Network Denial of Service"
+      ]
+    },
+    "raw_evidence_at_peak": {
+      "total_flows": 18353,
+      "benign_flows": 601,
+      "attack_flows": 17752,
+      "attack_rate": 0.9672533100855446
+    },
+    "investigation_summary": "Investigation Episode EP-cic_ids2018_mar01-d0b2f5 spans 18 minutes, peaking at a CRITICAL risk state (Score: 81.58). The dominant kinematic driver at peak was Activity. Sustained MITRE ATT&CK behaviors: TA0040: Impact. Physical evidence at peak: 96.7% attack rate. Prediction vs. Reality: Forecast was SIMULTANEOUS (Lead time: 0 min).",
+    "constituent_incident_ids": [
+      "INC-cic_ids2018_mar01-01268-47271b0d",
+      "INC-cic_ids2018_mar01-01269-dab2154c",
+      "INC-cic_ids2018_mar01-01270-aeeeb5f8",
+      "INC-cic_ids2018_mar01-01271-688d9469",
+      "INC-cic_ids2018_mar01-01272-68426872",
+      "INC-cic_ids2018_mar01-01273-38be6d5d",
+      "INC-cic_ids2018_mar01-01274-40343f31",
+      "INC-cic_ids2018_mar01-01275-cc1a8cb2",
+      "INC-cic_ids2018_mar01-01276-b66e2f66",
+      "INC-cic_ids2018_mar01-01277-b06d352a",
+      "INC-cic_ids2018_mar01-01278-efc1d3ad",
+      "INC-cic_ids2018_mar01-01279-015d2ede",
+      "INC-cic_ids2018_mar01-01280-0cf054ee",
+      "INC-cic_ids2018_mar01-01281-3a105e4f",
+      "INC-cic_ids2018_mar01-01282-533acde6",
+      "INC-cic_ids2018_mar01-01283-06c7acf1",
+      "INC-cic_ids2018_mar01-01284-d90a3618",
+      "INC-cic_ids2018_mar01-01285-851eb1a6"
+    ]
+  },
+  {
+    "episode_id": "EP-cic_ids2018_mar01-5a5ffe",
+    "dataset": "cic_ids2018_mar01",
+    "investigation_state": "NEW",
+    "temporal_bounds": {
+      "start_time": "2017-07-05 11:06:00",
+      "end_time": "2017-07-05 11:06:00",
+      "duration_minutes": 1
+    },
+    "risk_profile": {
+      "peak_risk_score": 52.21,
+      "peak_risk_level": "MEDIUM"
+    },
+    "dominant_signal_at_peak": "Forecast",
+    "forecast_behavior": {
+      "classification": "F_ONLY_NO_PHYSICAL_BREACH",
+      "lead_time_minutes": 0,
+      "f_time": "2017-07-05 11:06:00",
+      "b_time": null
+    },
+    "candidate_mitre_summary": {
+      "sustained_tactics": [
+        "TA0043: Reconnaissance"
+      ],
+      "sustained_techniques": [
+        "T1595: Active Scanning"
+      ]
+    },
+    "raw_evidence_at_peak": {
+      "total_flows": 274,
+      "benign_flows": 150,
+      "attack_flows": 124,
+      "attack_rate": 0.4525547445255474
+    },
+    "investigation_summary": "Investigation Episode EP-cic_ids2018_mar01-5a5ffe spans 1 minutes, peaking at a MEDIUM risk state (Score: 52.21). The dominant kinematic driver at peak was Forecast. Sustained MITRE ATT&CK behaviors: TA0043: Reconnaissance. Physical evidence at peak: 45.3% attack rate. Prediction vs. Reality: Forecast was F_ONLY_NO_PHYSICAL_BREACH (Lead time: 0 min).",
+    "constituent_incident_ids": [
+      "INC-cic_ids2018_mar01-01291-61044ccb"
+    ]
+  },
+  {
+    "episode_id": "EP-cic_ids2018_mar01-14957b",
+    "dataset": "cic_ids2018_mar01",
+    "investigation_state": "NEW",
+    "temporal_bounds": {
+      "start_time": "2017-07-05 11:10:00",
+      "end_time": "2017-07-05 11:19:00",
+      "duration_minutes": 10
+    },
+    "risk_profile": {
+      "peak_risk_score": 69.66,
+      "peak_risk_level": "HIGH"
+    },
+    "dominant_signal_at_peak": "Forecast",
+    "forecast_behavior": {
+      "classification": "SIMULTANEOUS",
+      "lead_time_minutes": 0,
+      "f_time": "2017-07-05 11:10:00",
+      "b_time": "2017-07-05 11:10:00"
+    },
+    "candidate_mitre_summary": {
+      "sustained_tactics": [
+        "TA0040: Impact",
+        "TA0043: Reconnaissance"
+      ],
+      "sustained_techniques": [
+        "T1498: Network Denial of Service",
+        "T1595: Active Scanning"
+      ]
+    },
+    "raw_evidence_at_peak": {
+      "total_flows": 2717,
+      "benign_flows": 669,
+      "attack_flows": 2048,
+      "attack_rate": 0.7537725432462274
+    },
+    "investigation_summary": "Investigation Episode EP-cic_ids2018_mar01-14957b spans 10 minutes, peaking at a HIGH risk state (Score: 69.66). The dominant kinematic driver at peak was Forecast. Sustained MITRE ATT&CK behaviors: TA0040: Impact, TA0043: Reconnaissance. Physical evidence at peak: 75.4% attack rate. Prediction vs. Reality: Forecast was SIMULTANEOUS (Lead time: 0 min).",
+    "constituent_incident_ids": [
+      "INC-cic_ids2018_mar01-01295-0fb5e3e0",
+      "INC-cic_ids2018_mar01-01296-6cc6cf75",
+      "INC-cic_ids2018_mar01-01297-11c23fdf",
+      "INC-cic_ids2018_mar01-01298-31406b7c",
+      "INC-cic_ids2018_mar01-01299-2b86a64f",
+      "INC-cic_ids2018_mar01-01300-c56e432f",
+      "INC-cic_ids2018_mar01-01301-d9c3a8c3",
+      "INC-cic_ids2018_mar01-01302-22d15d5c",
+      "INC-cic_ids2018_mar01-01303-aa5341cf",
+      "INC-cic_ids2018_mar01-01304-f761dee9"
+    ]
+  },
+  {
+    "episode_id": "EP-cic_ids2018_mar01-afb122",
+    "dataset": "cic_ids2018_mar01",
+    "investigation_state": "NEW",
+    "temporal_bounds": {
+      "start_time": "2017-07-07 02:51:00",
+      "end_time": "2017-07-07 02:56:00",
+      "duration_minutes": 6
+    },
+    "risk_profile": {
+      "peak_risk_score": 75.2,
+      "peak_risk_level": "HIGH"
+    },
+    "dominant_signal_at_peak": "Activity",
+    "forecast_behavior": {
+      "classification": "SIMULTANEOUS",
+      "lead_time_minutes": 0,
+      "f_time": "2017-07-07 02:51:00",
+      "b_time": "2017-07-07 02:51:00"
+    },
+    "candidate_mitre_summary": {
+      "sustained_tactics": [
+        "TA0040: Impact"
+      ],
+      "sustained_techniques": [
+        "T1498: Network Denial of Service"
+      ]
+    },
+    "raw_evidence_at_peak": {
+      "total_flows": 11205,
+      "benign_flows": 289,
+      "attack_flows": 10916,
+      "attack_rate": 0.9742079428826416
+    },
+    "investigation_summary": "Investigation Episode EP-cic_ids2018_mar01-afb122 spans 6 minutes, peaking at a HIGH risk state (Score: 75.20). The dominant kinematic driver at peak was Activity. Sustained MITRE ATT&CK behaviors: TA0040: Impact. Physical evidence at peak: 97.4% attack rate. Prediction vs. Reality: Forecast was SIMULTANEOUS (Lead time: 0 min).",
+    "constituent_incident_ids": [
+      "INC-cic_ids2018_mar01-01960-c0c0347a",
+      "INC-cic_ids2018_mar01-01961-1fafd8e7",
+      "INC-cic_ids2018_mar01-01962-2db17b0e",
+      "INC-cic_ids2018_mar01-01963-1e137bcf",
+      "INC-cic_ids2018_mar01-01964-e0060080",
+      "INC-cic_ids2018_mar01-01965-eeb92ba9"
+    ]
+  },
+  {
+    "episode_id": "EP-cic_ids2018_mar01-01075c",
+    "dataset": "cic_ids2018_mar01",
+    "investigation_state": "NEW",
+    "temporal_bounds": {
+      "start_time": "2017-07-07 03:08:00",
+      "end_time": "2017-07-07 03:10:00",
+      "duration_minutes": 3
+    },
+    "risk_profile": {
+      "peak_risk_score": 71.97,
+      "peak_risk_level": "HIGH"
+    },
+    "dominant_signal_at_peak": "Activity",
+    "forecast_behavior": {
+      "classification": "SIMULTANEOUS",
+      "lead_time_minutes": 0,
+      "f_time": "2017-07-07 03:08:00",
+      "b_time": "2017-07-07 03:08:00"
+    },
+    "candidate_mitre_summary": {
+      "sustained_tactics": [
+        "TA0040: Impact",
+        "TA0043: Reconnaissance"
+      ],
+      "sustained_techniques": [
+        "T1498: Network Denial of Service",
+        "T1595: Active Scanning"
+      ]
+    },
+    "raw_evidence_at_peak": {
+      "total_flows": 6261,
+      "benign_flows": 1259,
+      "attack_flows": 5002,
+      "attack_rate": 0.7989139115157323
+    },
+    "investigation_summary": "Investigation Episode EP-cic_ids2018_mar01-01075c spans 3 minutes, peaking at a HIGH risk state (Score: 71.97). The dominant kinematic driver at peak was Activity. Sustained MITRE ATT&CK behaviors: TA0040: Impact, TA0043: Reconnaissance. Physical evidence at peak: 79.9% attack rate. Prediction vs. Reality: Forecast was SIMULTANEOUS (Lead time: 0 min).",
+    "constituent_incident_ids": [
+      "INC-cic_ids2018_mar01-01977-092124a3",
+      "INC-cic_ids2018_mar01-01978-54bfc789",
+      "INC-cic_ids2018_mar01-01979-d3737eac"
+    ]
+  },
+  {
+    "episode_id": "EP-cic_ids2018_mar01-69a880",
+    "dataset": "cic_ids2018_mar01",
+    "investigation_state": "NEW",
+    "temporal_bounds": {
+      "start_time": "2017-07-07 03:22:00",
+      "end_time": "2017-07-07 03:23:00",
+      "duration_minutes": 2
+    },
+    "risk_profile": {
+      "peak_risk_score": 72.15,
+      "peak_risk_level": "HIGH"
+    },
+    "dominant_signal_at_peak": "Forecast",
+    "forecast_behavior": {
+      "classification": "SIMULTANEOUS",
+      "lead_time_minutes": 0,
+      "f_time": "2017-07-07 03:22:00",
+      "b_time": "2017-07-07 03:22:00"
+    },
+    "candidate_mitre_summary": {
+      "sustained_tactics": [
+        "TA0040: Impact"
+      ],
+      "sustained_techniques": [
+        "T1498: Network Denial of Service"
+      ]
+    },
+    "raw_evidence_at_peak": {
+      "total_flows": 7157,
+      "benign_flows": 2143,
+      "attack_flows": 5014,
+      "attack_rate": 0.7005728657258627
+    },
+    "investigation_summary": "Investigation Episode EP-cic_ids2018_mar01-69a880 spans 2 minutes, peaking at a HIGH risk state (Score: 72.15). The dominant kinematic driver at peak was Forecast. Sustained MITRE ATT&CK behaviors: TA0040: Impact. Physical evidence at peak: 70.1% attack rate. Prediction vs. Reality: Forecast was SIMULTANEOUS (Lead time: 0 min).",
+    "constituent_incident_ids": [
+      "INC-cic_ids2018_mar01-01991-68a4f710",
+      "INC-cic_ids2018_mar01-01992-d90ce1a2"
+    ]
+  },
+  {
+    "episode_id": "EP-cic_ids2018_mar01-49e73b",
+    "dataset": "cic_ids2018_mar01",
+    "investigation_state": "NEW",
+    "temporal_bounds": {
+      "start_time": "2017-07-07 03:56:00",
+      "end_time": "2017-07-07 04:16:00",
+      "duration_minutes": 21
+    },
+    "risk_profile": {
+      "peak_risk_score": 71.81,
+      "peak_risk_level": "HIGH"
+    },
+    "dominant_signal_at_peak": "Forecast",
+    "forecast_behavior": {
+      "classification": "SIMULTANEOUS",
+      "lead_time_minutes": 0,
+      "f_time": "2017-07-07 03:56:00",
+      "b_time": "2017-07-07 03:56:00"
+    },
+    "candidate_mitre_summary": {
+      "sustained_tactics": [
+        "TA0040: Impact"
+      ],
+      "sustained_techniques": [
+        "T1498: Network Denial of Service"
+      ]
+    },
+    "raw_evidence_at_peak": {
+      "total_flows": 3671,
+      "benign_flows": 1233,
+      "attack_flows": 2438,
+      "attack_rate": 0.66412421683465
+    },
+    "investigation_summary": "Investigation Episode EP-cic_ids2018_mar01-49e73b spans 21 minutes, peaking at a HIGH risk state (Score: 71.81). The dominant kinematic driver at peak was Forecast. Sustained MITRE ATT&CK behaviors: TA0040: Impact. Physical evidence at peak: 66.4% attack rate. Prediction vs. Reality: Forecast was SIMULTANEOUS (Lead time: 0 min).",
+    "constituent_incident_ids": [
+      "INC-cic_ids2018_mar01-02025-16dce02f",
+      "INC-cic_ids2018_mar01-02026-f525b409",
+      "INC-cic_ids2018_mar01-02027-d1db476e",
+      "INC-cic_ids2018_mar01-02028-d490ac29",
+      "INC-cic_ids2018_mar01-02029-80640dc6",
+      "INC-cic_ids2018_mar01-02030-14c9d7d3",
+      "INC-cic_ids2018_mar01-02031-cabec1e8",
+      "INC-cic_ids2018_mar01-02032-f7e002fd",
+      "INC-cic_ids2018_mar01-02033-de76960f",
+      "INC-cic_ids2018_mar01-02034-bab63e5b",
+      "INC-cic_ids2018_mar01-02035-97f439e5",
+      "INC-cic_ids2018_mar01-02036-33b794a4",
+      "INC-cic_ids2018_mar01-02037-ac0dda28",
+      "INC-cic_ids2018_mar01-02038-ee057622",
+      "INC-cic_ids2018_mar01-02039-572d6f16",
+      "INC-cic_ids2018_mar01-02040-21928e62",
+      "INC-cic_ids2018_mar01-02041-1e78f4ba",
+      "INC-cic_ids2018_mar01-02042-c673123b",
+      "INC-cic_ids2018_mar01-02043-0e5fdff5",
+      "INC-cic_ids2018_mar01-02044-75728068",
+      "INC-cic_ids2018_mar01-02045-a35a0cb1"
+    ]
+  },
+  {
+    "episode_id": "EP-cic_ids2018_mar01-804c76",
+    "dataset": "cic_ids2018_mar01",
+    "investigation_state": "NEW",
+    "temporal_bounds": {
+      "start_time": "2017-07-07 10:42:00",
+      "end_time": "2017-07-07 10:50:00",
+      "duration_minutes": 9
+    },
+    "risk_profile": {
+      "peak_risk_score": 52.37,
+      "peak_risk_level": "MEDIUM"
+    },
+    "dominant_signal_at_peak": "Forecast",
+    "forecast_behavior": {
+      "classification": "LEADING",
+      "lead_time_minutes": 1,
+      "f_time": "2017-07-07 10:42:00",
+      "b_time": "2017-07-07 10:43:00"
+    },
+    "candidate_mitre_summary": {
+      "sustained_tactics": [
+        "TA0043: Reconnaissance"
+      ],
+      "sustained_techniques": [
+        "T1595: Active Scanning"
+      ]
+    },
+    "raw_evidence_at_peak": {
+      "total_flows": 203,
+      "benign_flows": 133,
+      "attack_flows": 70,
+      "attack_rate": 0.3448275862068966
+    },
+    "investigation_summary": "Investigation Episode EP-cic_ids2018_mar01-804c76 spans 9 minutes, peaking at a MEDIUM risk state (Score: 52.37). The dominant kinematic driver at peak was Forecast. Sustained MITRE ATT&CK behaviors: TA0043: Reconnaissance. Physical evidence at peak: 34.5% attack rate. Prediction vs. Reality: Forecast was LEADING (Lead time: 1 min).",
+    "constituent_incident_ids": [
+      "INC-cic_ids2018_mar01-02181-067973ae",
+      "INC-cic_ids2018_mar01-02182-edd396e4",
+      "INC-cic_ids2018_mar01-02183-3406e881",
+      "INC-cic_ids2018_mar01-02184-a086dc47",
+      "INC-cic_ids2018_mar01-02185-d58e510e",
+      "INC-cic_ids2018_mar01-02186-4f393f90",
+      "INC-cic_ids2018_mar01-02187-1e659ea3",
+      "INC-cic_ids2018_mar01-02188-7f35b2bf",
+      "INC-cic_ids2018_mar01-02189-6f358ce3"
+    ]
+  }
+]

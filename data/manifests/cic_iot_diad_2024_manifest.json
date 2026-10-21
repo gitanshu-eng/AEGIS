@@ -1,0 +1,1236 @@
+{
+  "dataset_name": "CIC-IoT-DIAD-2024",
+  "temporal_resolution": "1min",
+  "total_windows": 315202,
+  "total_flows": 26969077,
+  "total_attack_flows": 26570747,
+  "total_benign_flows": 398330,
+  "attack_ratio": 0.98523,
+  "time_range": {
+    "start": "2022-08-02 10:42:00",
+    "end": "2023-02-14 13:05:00"
+  },
+  "canonical_columns": [
+    "time_window",
+    "total_flows",
+    "attack_flows",
+    "flow_bytes_sum",
+    "flow_packets_sum",
+    "flow_duration_mean",
+    "benign_flows",
+    "observed",
+    "label"
+  ],
+  "files": {
+    "BenignTraffic.pcap_Flow.csv": {
+      "label": "Benign",
+      "start_window": "2022-10-07 14:15:00",
+      "end_window": "2022-10-07 23:30:00",
+      "total_windows": 556,
+      "observed_windows": 556,
+      "attack_flows": 0,
+      "benign_flows": 183630,
+      "total_flows": 183630
+    },
+    "BenignTraffic1.pcap_Flow.csv": {
+      "label": "Benign",
+      "start_window": "2022-10-07 23:30:00",
+      "end_window": "2022-10-08 06:45:00",
+      "total_windows": 436,
+      "observed_windows": 436,
+      "attack_flows": 0,
+      "benign_flows": 84526,
+      "total_flows": 84526
+    },
+    "BenignTraffic2.pcap_Flow.csv": {
+      "label": "Benign",
+      "start_window": "2022-10-08 06:45:00",
+      "end_window": "2022-10-08 14:47:00",
+      "total_windows": 483,
+      "observed_windows": 483,
+      "attack_flows": 0,
+      "benign_flows": 91279,
+      "total_flows": 91279
+    },
+    "BenignTraffic3.pcap_Flow.csv": {
+      "label": "Benign",
+      "start_window": "2022-10-08 14:47:00",
+      "end_window": "2022-10-08 18:15:00",
+      "total_windows": 209,
+      "observed_windows": 209,
+      "attack_flows": 0,
+      "benign_flows": 38895,
+      "total_flows": 38895
+    },
+    "DDoS-ACK_Fragmentation.pcap_Flow.csv": {
+      "label": "DDoS-ACK_Fragmentation",
+      "start_window": "2022-10-25 09:26:00",
+      "end_window": "2022-10-25 10:20:00",
+      "total_windows": 55,
+      "observed_windows": 39,
+      "attack_flows": 323886,
+      "benign_flows": 0,
+      "total_flows": 323886
+    },
+    "DDoS-ACK_Fragmentation1.pcap_Flow.csv": {
+      "label": "DDoS-ACK_Fragmentation",
+      "start_window": "2022-10-25 10:20:00",
+      "end_window": "2022-10-25 11:08:00",
+      "total_windows": 49,
+      "observed_windows": 38,
+      "attack_flows": 137172,
+      "benign_flows": 0,
+      "total_flows": 137172
+    },
+    "DDoS-ACK_Fragmentation12.pcap_Flow.csv": {
+      "label": "DDoS-ACK_Fragmentation",
+      "start_window": "2022-10-26 16:56:00",
+      "end_window": "2022-10-26 17:21:00",
+      "total_windows": 26,
+      "observed_windows": 17,
+      "attack_flows": 37292,
+      "benign_flows": 0,
+      "total_flows": 37292
+    },
+    "DDoS-ACK_Fragmentation2.pcap_Flow.csv": {
+      "label": "DDoS-ACK_Fragmentation",
+      "start_window": "2022-10-25 11:08:00",
+      "end_window": "2022-10-25 12:06:00",
+      "total_windows": 59,
+      "observed_windows": 41,
+      "attack_flows": 121409,
+      "benign_flows": 0,
+      "total_flows": 121409
+    },
+    "DDoS-ACK_Fragmentation3.pcap_Flow.csv": {
+      "label": "DDoS-ACK_Fragmentation",
+      "start_window": "2022-10-25 12:06:00",
+      "end_window": "2022-10-25 15:16:00",
+      "total_windows": 191,
+      "observed_windows": 37,
+      "attack_flows": 174443,
+      "benign_flows": 0,
+      "total_flows": 174443
+    },
+    "DDoS-ACK_Fragmentation4.pcap_Flow.csv": {
+      "label": "DDoS-ACK_Fragmentation",
+      "start_window": "2022-10-25 15:16:00",
+      "end_window": "2022-10-25 17:56:00",
+      "total_windows": 161,
+      "observed_windows": 28,
+      "attack_flows": 152216,
+      "benign_flows": 0,
+      "total_flows": 152216
+    },
+    "DDoS-ACK_Fragmentation5.pcap_Flow.csv": {
+      "label": "DDoS-ACK_Fragmentation",
+      "start_window": "2022-10-25 17:56:00",
+      "end_window": "2022-10-25 18:31:00",
+      "total_windows": 36,
+      "observed_windows": 21,
+      "attack_flows": 209344,
+      "benign_flows": 0,
+      "total_flows": 209344
+    },
+    "DDoS-ACK_Fragmentation6.pcap_Flow.csv": {
+      "label": "DDoS-ACK_Fragmentation",
+      "start_window": "2022-10-25 18:31:00",
+      "end_window": "2022-10-26 11:49:00",
+      "total_windows": 1039,
+      "observed_windows": 25,
+      "attack_flows": 209790,
+      "benign_flows": 0,
+      "total_flows": 209790
+    },
+    "DDoS-ACK_Fragmentation7.pcap_Flow.csv": {
+      "label": "DDoS-ACK_Fragmentation",
+      "start_window": "2022-10-26 11:49:00",
+      "end_window": "2022-10-26 12:45:00",
+      "total_windows": 57,
+      "observed_windows": 28,
+      "attack_flows": 127543,
+      "benign_flows": 0,
+      "total_flows": 127543
+    },
+    "DDoS-ACK_Fragmentation8.pcap_Flow.csv": {
+      "label": "DDoS-ACK_Fragmentation",
+      "start_window": "2022-10-26 12:45:00",
+      "end_window": "2022-10-26 13:21:00",
+      "total_windows": 37,
+      "observed_windows": 24,
+      "attack_flows": 179379,
+      "benign_flows": 0,
+      "total_flows": 179379
+    },
+    "DDoS-HTTP_Flood-.pcap_Flow.csv": {
+      "label": "DDoS-HTTP_Flood",
+      "start_window": "2022-09-14 10:47:00",
+      "end_window": "2022-11-07 15:46:00",
+      "total_windows": 78060,
+      "observed_windows": 98,
+      "attack_flows": 505720,
+      "benign_flows": 0,
+      "total_flows": 505720
+    },
+    "DDoS-ICMP_Flood.pcap_Flow.csv": {
+      "label": "DDoS-ICMP_Flood",
+      "start_window": "2022-09-06 12:57:00",
+      "end_window": "2022-09-06 13:28:00",
+      "total_windows": 32,
+      "observed_windows": 25,
+      "attack_flows": 10415,
+      "benign_flows": 0,
+      "total_flows": 10415
+    },
+    "DDoS-ICMP_Flood1.pcap_Flow.csv": {
+      "label": "DDoS-ICMP_Flood",
+      "start_window": "2022-09-06 13:28:00",
+      "end_window": "2022-09-06 15:22:00",
+      "total_windows": 115,
+      "observed_windows": 22,
+      "attack_flows": 8263,
+      "benign_flows": 0,
+      "total_flows": 8263
+    },
+    "DDoS-ICMP_Flood10.pcap_Flow.csv": {
+      "label": "DDoS-ICMP_Flood",
+      "start_window": "2022-09-07 14:03:00",
+      "end_window": "2022-09-07 14:45:00",
+      "total_windows": 43,
+      "observed_windows": 26,
+      "attack_flows": 7558,
+      "benign_flows": 0,
+      "total_flows": 7558
+    },
+    "DDoS-ICMP_Flood11.pcap_Flow.csv": {
+      "label": "DDoS-ICMP_Flood",
+      "start_window": "2022-09-07 14:45:00",
+      "end_window": "2022-09-07 15:26:00",
+      "total_windows": 42,
+      "observed_windows": 26,
+      "attack_flows": 8312,
+      "benign_flows": 0,
+      "total_flows": 8312
+    },
+    "DDoS-ICMP_Flood12.pcap_Flow.csv": {
+      "label": "DDoS-ICMP_Flood",
+      "start_window": "2022-09-07 15:26:00",
+      "end_window": "2022-09-07 16:10:00",
+      "total_windows": 45,
+      "observed_windows": 27,
+      "attack_flows": 7204,
+      "benign_flows": 0,
+      "total_flows": 7204
+    },
+    "DDoS-ICMP_Flood13.pcap_Flow.csv": {
+      "label": "DDoS-ICMP_Flood",
+      "start_window": "2022-09-07 16:10:00",
+      "end_window": "2022-09-07 17:06:00",
+      "total_windows": 57,
+      "observed_windows": 23,
+      "attack_flows": 5552,
+      "benign_flows": 0,
+      "total_flows": 5552
+    },
+    "DDoS-ICMP_Flood14.pcap_Flow.csv": {
+      "label": "DDoS-ICMP_Flood",
+      "start_window": "2022-09-07 17:06:00",
+      "end_window": "2022-09-08 10:14:00",
+      "total_windows": 1029,
+      "observed_windows": 27,
+      "attack_flows": 6572,
+      "benign_flows": 0,
+      "total_flows": 6572
+    },
+    "DDoS-ICMP_Flood15.pcap_Flow.csv": {
+      "label": "DDoS-ICMP_Flood",
+      "start_window": "2022-09-08 10:14:00",
+      "end_window": "2022-09-08 12:09:00",
+      "total_windows": 116,
+      "observed_windows": 32,
+      "attack_flows": 10323,
+      "benign_flows": 0,
+      "total_flows": 10323
+    },
+    "DDoS-ICMP_Flood16.pcap_Flow.csv": {
+      "label": "DDoS-ICMP_Flood",
+      "start_window": "2022-09-08 12:09:00",
+      "end_window": "2022-09-12 09:49:00",
+      "total_windows": 5621,
+      "observed_windows": 36,
+      "attack_flows": 10270,
+      "benign_flows": 0,
+      "total_flows": 10270
+    },
+    "DDoS-ICMP_Flood17.pcap_Flow.csv": {
+      "label": "DDoS-ICMP_Flood",
+      "start_window": "2022-09-12 09:49:00",
+      "end_window": "2022-09-12 10:26:00",
+      "total_windows": 38,
+      "observed_windows": 27,
+      "attack_flows": 4643,
+      "benign_flows": 0,
+      "total_flows": 4643
+    },
+    "DDoS-ICMP_Flood18.pcap_Flow.csv": {
+      "label": "DDoS-ICMP_Flood",
+      "start_window": "2022-09-12 10:26:00",
+      "end_window": "2022-09-12 11:07:00",
+      "total_windows": 42,
+      "observed_windows": 25,
+      "attack_flows": 4062,
+      "benign_flows": 0,
+      "total_flows": 4062
+    },
+    "DDoS-ICMP_Flood19.pcap_Flow.csv": {
+      "label": "DDoS-ICMP_Flood",
+      "start_window": "2022-09-12 11:07:00",
+      "end_window": "2022-09-12 11:48:00",
+      "total_windows": 42,
+      "observed_windows": 29,
+      "attack_flows": 8121,
+      "benign_flows": 0,
+      "total_flows": 8121
+    },
+    "DDoS-ICMP_Flood2.pcap_Flow.csv": {
+      "label": "DDoS-ICMP_Flood",
+      "start_window": "2022-09-06 15:22:00",
+      "end_window": "2022-09-06 16:30:00",
+      "total_windows": 69,
+      "observed_windows": 24,
+      "attack_flows": 10958,
+      "benign_flows": 0,
+      "total_flows": 10958
+    },
+    "DDoS-ICMP_Flood20.pcap_Flow.csv": {
+      "label": "DDoS-ICMP_Flood",
+      "start_window": "2022-09-12 11:48:00",
+      "end_window": "2022-09-12 13:18:00",
+      "total_windows": 91,
+      "observed_windows": 29,
+      "attack_flows": 7322,
+      "benign_flows": 0,
+      "total_flows": 7322
+    },
+    "DDoS-ICMP_Flood21.pcap_Flow.csv": {
+      "label": "DDoS-ICMP_Flood",
+      "start_window": "2022-09-12 13:18:00",
+      "end_window": "2022-09-12 14:01:00",
+      "total_windows": 44,
+      "observed_windows": 29,
+      "attack_flows": 7293,
+      "benign_flows": 0,
+      "total_flows": 7293
+    },
+    "DDoS-ICMP_Flood22.pcap_Flow.csv": {
+      "label": "DDoS-ICMP_Flood",
+      "start_window": "2022-09-12 14:02:00",
+      "end_window": "2022-09-12 14:53:00",
+      "total_windows": 52,
+      "observed_windows": 28,
+      "attack_flows": 5993,
+      "benign_flows": 0,
+      "total_flows": 5993
+    },
+    "DDoS-ICMP_Flood23.pcap_Flow.csv": {
+      "label": "DDoS-ICMP_Flood",
+      "start_window": "2022-09-12 14:53:00",
+      "end_window": "2022-09-12 16:33:00",
+      "total_windows": 101,
+      "observed_windows": 21,
+      "attack_flows": 5193,
+      "benign_flows": 0,
+      "total_flows": 5193
+    },
+    "DDoS-ICMP_Flood24.pcap_Flow.csv": {
+      "label": "DDoS-ICMP_Flood",
+      "start_window": "2022-09-12 16:33:00",
+      "end_window": "2022-09-12 17:20:00",
+      "total_windows": 48,
+      "observed_windows": 32,
+      "attack_flows": 6055,
+      "benign_flows": 0,
+      "total_flows": 6055
+    },
+    "DDoS-ICMP_Flood25.pcap_Flow.csv": {
+      "label": "DDoS-ICMP_Flood",
+      "start_window": "2022-09-12 17:20:00",
+      "end_window": "2022-11-28 15:33:00",
+      "total_windows": 110774,
+      "observed_windows": 33,
+      "attack_flows": 9442,
+      "benign_flows": 0,
+      "total_flows": 9442
+    },
+    "DDoS-ICMP_Flood26.pcap_Flow.csv": {
+      "label": "DDoS-ICMP_Flood",
+      "start_window": "2022-11-28 15:33:00",
+      "end_window": "2022-11-28 16:01:00",
+      "total_windows": 29,
+      "observed_windows": 22,
+      "attack_flows": 5432,
+      "benign_flows": 0,
+      "total_flows": 5432
+    },
+    "DDoS-ICMP_Flood3.pcap_Flow.csv": {
+      "label": "DDoS-ICMP_Flood",
+      "start_window": "2022-09-06 16:30:00",
+      "end_window": "2022-09-06 16:59:00",
+      "total_windows": 30,
+      "observed_windows": 22,
+      "attack_flows": 7845,
+      "benign_flows": 0,
+      "total_flows": 7845
+    },
+    "DDoS-ICMP_Flood4.pcap_Flow.csv": {
+      "label": "DDoS-ICMP_Flood",
+      "start_window": "2022-09-06 16:59:00",
+      "end_window": "2022-09-06 17:40:00",
+      "total_windows": 42,
+      "observed_windows": 25,
+      "attack_flows": 16190,
+      "benign_flows": 0,
+      "total_flows": 16190
+    },
+    "DDoS-ICMP_Flood5.pcap_Flow.csv": {
+      "label": "DDoS-ICMP_Flood",
+      "start_window": "2022-09-06 17:40:00",
+      "end_window": "2022-09-07 09:42:00",
+      "total_windows": 963,
+      "observed_windows": 24,
+      "attack_flows": 7840,
+      "benign_flows": 0,
+      "total_flows": 7840
+    },
+    "DDoS-ICMP_Flood6.pcap_Flow.csv": {
+      "label": "DDoS-ICMP_Flood",
+      "start_window": "2022-09-07 09:42:00",
+      "end_window": "2022-09-07 11:04:00",
+      "total_windows": 83,
+      "observed_windows": 34,
+      "attack_flows": 4783,
+      "benign_flows": 0,
+      "total_flows": 4783
+    },
+    "DDoS-ICMP_Flood7.pcap_Flow.csv": {
+      "label": "DDoS-ICMP_Flood",
+      "start_window": "2022-09-07 11:04:00",
+      "end_window": "2022-09-07 11:33:00",
+      "total_windows": 30,
+      "observed_windows": 23,
+      "attack_flows": 3244,
+      "benign_flows": 0,
+      "total_flows": 3244
+    },
+    "DDoS-ICMP_Flood8.pcap_Flow.csv": {
+      "label": "DDoS-ICMP_Flood",
+      "start_window": "2022-09-07 11:33:00",
+      "end_window": "2022-09-07 12:10:00",
+      "total_windows": 38,
+      "observed_windows": 22,
+      "attack_flows": 6411,
+      "benign_flows": 0,
+      "total_flows": 6411
+    },
+    "DDoS-ICMP_Flood9.pcap_Flow.csv": {
+      "label": "DDoS-ICMP_Flood",
+      "start_window": "2022-09-07 12:10:00",
+      "end_window": "2022-09-07 14:03:00",
+      "total_windows": 114,
+      "observed_windows": 26,
+      "attack_flows": 6955,
+      "benign_flows": 0,
+      "total_flows": 6955
+    },
+    "DDoS-ICMP_Fragmentation.pcap_Flow.csv": {
+      "label": "DDoS-ICMP_Fragmentation",
+      "start_window": "2022-10-04 13:55:00",
+      "end_window": "2022-10-04 14:42:00",
+      "total_windows": 48,
+      "observed_windows": 37,
+      "attack_flows": 14479,
+      "benign_flows": 0,
+      "total_flows": 14479
+    },
+    "DDoS-ICMP_Fragmentation1.pcap_Flow.csv": {
+      "label": "DDoS-ICMP_Fragmentation",
+      "start_window": "2022-10-04 14:42:00",
+      "end_window": "2022-10-04 16:23:00",
+      "total_windows": 102,
+      "observed_windows": 45,
+      "attack_flows": 17480,
+      "benign_flows": 0,
+      "total_flows": 17480
+    },
+    "DDoS-ICMP_Fragmentation10.pcap_Flow.csv": {
+      "label": "DDoS-ICMP_Fragmentation",
+      "start_window": "2022-10-06 11:42:00",
+      "end_window": "2022-10-06 12:42:00",
+      "total_windows": 61,
+      "observed_windows": 35,
+      "attack_flows": 14420,
+      "benign_flows": 0,
+      "total_flows": 14420
+    },
+    "DDoS-ICMP_Fragmentation11.pcap_Flow.csv": {
+      "label": "DDoS-ICMP_Fragmentation",
+      "start_window": "2022-10-06 12:42:00",
+      "end_window": "2022-10-06 13:22:00",
+      "total_windows": 41,
+      "observed_windows": 26,
+      "attack_flows": 11479,
+      "benign_flows": 0,
+      "total_flows": 11479
+    },
+    "DDoS-ICMP_Fragmentation12.pcap_Flow.csv": {
+      "label": "DDoS-ICMP_Fragmentation",
+      "start_window": "2022-10-06 13:22:00",
+      "end_window": "2022-10-06 15:15:00",
+      "total_windows": 114,
+      "observed_windows": 41,
+      "attack_flows": 18026,
+      "benign_flows": 0,
+      "total_flows": 18026
+    },
+    "DDoS-ICMP_Fragmentation13.pcap_Flow.csv": {
+      "label": "DDoS-ICMP_Fragmentation",
+      "start_window": "2022-10-06 15:15:00",
+      "end_window": "2022-10-06 16:09:00",
+      "total_windows": 55,
+      "observed_windows": 32,
+      "attack_flows": 12980,
+      "benign_flows": 0,
+      "total_flows": 12980
+    },
+    "DDoS-ICMP_Fragmentation14.pcap_Flow.csv": {
+      "label": "DDoS-ICMP_Fragmentation",
+      "start_window": "2022-10-06 16:09:00",
+      "end_window": "2022-10-06 16:53:00",
+      "total_windows": 45,
+      "observed_windows": 29,
+      "attack_flows": 13411,
+      "benign_flows": 0,
+      "total_flows": 13411
+    },
+    "DDoS-ICMP_Fragmentation15.pcap_Flow.csv": {
+      "label": "DDoS-ICMP_Fragmentation",
+      "start_window": "2022-10-06 16:53:00",
+      "end_window": "2022-10-06 17:16:00",
+      "total_windows": 24,
+      "observed_windows": 18,
+      "attack_flows": 9890,
+      "benign_flows": 0,
+      "total_flows": 9890
+    },
+    "DDoS-ICMP_Fragmentation16.pcap_Flow.csv": {
+      "label": "DDoS-ICMP_Fragmentation",
+      "start_window": "2022-10-06 17:16:00",
+      "end_window": "2022-10-13 11:32:00",
+      "total_windows": 9737,
+      "observed_windows": 41,
+      "attack_flows": 16489,
+      "benign_flows": 0,
+      "total_flows": 16489
+    },
+    "DDoS-ICMP_Fragmentation19.pcap_Flow.csv": {
+      "label": "DDoS-ICMP_Fragmentation",
+      "start_window": "2022-10-13 15:15:00",
+      "end_window": "2022-11-29 16:40:00",
+      "total_windows": 67766,
+      "observed_windows": 38,
+      "attack_flows": 10963,
+      "benign_flows": 0,
+      "total_flows": 10963
+    },
+    "DDoS-ICMP_Fragmentation2.pcap_Flow.csv": {
+      "label": "DDoS-ICMP_Fragmentation",
+      "start_window": "2022-10-04 16:23:00",
+      "end_window": "2022-10-05 10:07:00",
+      "total_windows": 1065,
+      "observed_windows": 32,
+      "attack_flows": 13462,
+      "benign_flows": 0,
+      "total_flows": 13462
+    },
+    "DDoS-ICMP_Fragmentation3.pcap_Flow.csv": {
+      "label": "DDoS-ICMP_Fragmentation",
+      "start_window": "2022-10-05 10:07:00",
+      "end_window": "2022-10-05 11:26:00",
+      "total_windows": 80,
+      "observed_windows": 52,
+      "attack_flows": 23405,
+      "benign_flows": 0,
+      "total_flows": 23405
+    },
+    "DDoS-ICMP_Fragmentation4.pcap_Flow.csv": {
+      "label": "DDoS-ICMP_Fragmentation",
+      "start_window": "2022-10-05 11:26:00",
+      "end_window": "2022-10-05 13:50:00",
+      "total_windows": 145,
+      "observed_windows": 58,
+      "attack_flows": 25593,
+      "benign_flows": 0,
+      "total_flows": 25593
+    },
+    "DDoS-ICMP_Fragmentation5.pcap_Flow.csv": {
+      "label": "DDoS-ICMP_Fragmentation",
+      "start_window": "2022-10-05 13:50:00",
+      "end_window": "2022-10-05 15:17:00",
+      "total_windows": 88,
+      "observed_windows": 28,
+      "attack_flows": 10617,
+      "benign_flows": 0,
+      "total_flows": 10617
+    },
+    "DDoS-ICMP_Fragmentation6.pcap_Flow.csv": {
+      "label": "DDoS-ICMP_Fragmentation",
+      "start_window": "2022-10-05 15:17:00",
+      "end_window": "2022-10-05 15:52:00",
+      "total_windows": 36,
+      "observed_windows": 24,
+      "attack_flows": 10138,
+      "benign_flows": 0,
+      "total_flows": 10138
+    },
+    "DDoS-ICMP_Fragmentation7.pcap_Flow.csv": {
+      "label": "DDoS-ICMP_Fragmentation",
+      "start_window": "2022-10-05 15:52:00",
+      "end_window": "2022-10-05 16:43:00",
+      "total_windows": 52,
+      "observed_windows": 35,
+      "attack_flows": 14235,
+      "benign_flows": 0,
+      "total_flows": 14235
+    },
+    "DDoS-ICMP_Fragmentation9.pcap_Flow.csv": {
+      "label": "DDoS-ICMP_Fragmentation",
+      "start_window": "2022-10-05 17:21:00",
+      "end_window": "2022-10-06 11:42:00",
+      "total_windows": 1102,
+      "observed_windows": 45,
+      "attack_flows": 20380,
+      "benign_flows": 0,
+      "total_flows": 20380
+    },
+    "DNS_Spoofing.pcap_Flow.csv": {
+      "label": "DNS_Spoofing",
+      "start_window": "2022-11-15 12:16:00",
+      "end_window": "2022-11-16 16:25:00",
+      "total_windows": 1690,
+      "observed_windows": 309,
+      "attack_flows": 74856,
+      "benign_flows": 0,
+      "total_flows": 74856
+    },
+    "DictionaryBruteForce.pcap_Flow.csv": {
+      "label": "DictionaryBruteForce",
+      "start_window": "2022-10-14 13:18:00",
+      "end_window": "2022-10-17 12:02:00",
+      "total_windows": 4245,
+      "observed_windows": 37,
+      "attack_flows": 3619,
+      "benign_flows": 0,
+      "total_flows": 3619
+    },
+    "DoS-HTTP_Flood.pcap_Flow.csv": {
+      "label": "DoS-HTTP_Flood",
+      "start_window": "2022-08-08 13:25:00",
+      "end_window": "2022-08-09 10:45:00",
+      "total_windows": 1281,
+      "observed_windows": 59,
+      "attack_flows": 932513,
+      "benign_flows": 0,
+      "total_flows": 932513
+    },
+    "DoS-HTTP_Flood1.pcap_Flow.csv": {
+      "label": "DoS-HTTP_Flood",
+      "start_window": "2022-08-09 10:45:00",
+      "end_window": "2022-08-09 13:22:00",
+      "total_windows": 158,
+      "observed_windows": 72,
+      "attack_flows": 710231,
+      "benign_flows": 0,
+      "total_flows": 710231
+    },
+    "DoS-SYN_Flood.pcap_Flow.csv": {
+      "label": "DoS-SYN_Flood",
+      "start_window": "2022-08-02 10:42:00",
+      "end_window": "2022-08-02 12:06:00",
+      "total_windows": 85,
+      "observed_windows": 37,
+      "attack_flows": 3990181,
+      "benign_flows": 0,
+      "total_flows": 3990181
+    },
+    "DoS-SYN_Flood1.pcap_Flow.csv": {
+      "label": "DoS-SYN_Flood",
+      "start_window": "2022-08-02 12:06:00",
+      "end_window": "2022-08-02 14:02:00",
+      "total_windows": 117,
+      "observed_windows": 36,
+      "attack_flows": 1373103,
+      "benign_flows": 0,
+      "total_flows": 1373103
+    },
+    "DoS-SYN_Flood2.pcap_Flow.csv": {
+      "label": "DoS-SYN_Flood",
+      "start_window": "2022-08-02 14:02:00",
+      "end_window": "2022-08-03 11:28:00",
+      "total_windows": 1287,
+      "observed_windows": 62,
+      "attack_flows": 2130835,
+      "benign_flows": 0,
+      "total_flows": 2130835
+    },
+    "DoS-SYN_Flood3.pcap_Flow.csv": {
+      "label": "DoS-SYN_Flood",
+      "start_window": "2022-08-03 11:28:00",
+      "end_window": "2022-08-04 09:50:00",
+      "total_windows": 1343,
+      "observed_windows": 104,
+      "attack_flows": 1923524,
+      "benign_flows": 0,
+      "total_flows": 1923524
+    },
+    "DoS-SYN_Flood4.pcap_Flow.csv": {
+      "label": "DoS-SYN_Flood",
+      "start_window": "2022-08-04 09:50:00",
+      "end_window": "2022-08-04 14:16:00",
+      "total_windows": 267,
+      "observed_windows": 79,
+      "attack_flows": 2169821,
+      "benign_flows": 0,
+      "total_flows": 2169821
+    },
+    "DoS-SYN_Flood5.pcap_Flow.csv": {
+      "label": "DoS-SYN_Flood",
+      "start_window": "2022-08-04 14:16:00",
+      "end_window": "2022-08-05 11:00:00",
+      "total_windows": 1245,
+      "observed_windows": 47,
+      "attack_flows": 1795088,
+      "benign_flows": 0,
+      "total_flows": 1795088
+    },
+    "DoS-SYN_Flood6.pcap_Flow.csv": {
+      "label": "DoS-SYN_Flood",
+      "start_window": "2022-08-05 11:00:00",
+      "end_window": "2022-08-05 13:40:00",
+      "total_windows": 161,
+      "observed_windows": 45,
+      "attack_flows": 1503778,
+      "benign_flows": 0,
+      "total_flows": 1503778
+    },
+    "DoS-SYN_Flood7.pcap_Flow.csv": {
+      "label": "DoS-SYN_Flood",
+      "start_window": "2022-08-05 13:40:00",
+      "end_window": "2022-08-05 16:07:00",
+      "total_windows": 148,
+      "observed_windows": 50,
+      "attack_flows": 1404314,
+      "benign_flows": 0,
+      "total_flows": 1404314
+    },
+    "DoS-UDP_Flood.pcap_Flow.csv": {
+      "label": "DoS-UDP_Flood",
+      "start_window": "2022-08-09 15:37:00",
+      "end_window": "2022-08-10 10:19:00",
+      "total_windows": 1123,
+      "observed_windows": 29,
+      "attack_flows": 934001,
+      "benign_flows": 0,
+      "total_flows": 934001
+    },
+    "DoS-UDP_Flood10.pcap_Flow.csv": {
+      "label": "DoS-UDP_Flood",
+      "start_window": "2022-08-11 16:00:00",
+      "end_window": "2022-08-12 09:38:00",
+      "total_windows": 1059,
+      "observed_windows": 53,
+      "attack_flows": 61907,
+      "benign_flows": 0,
+      "total_flows": 61907
+    },
+    "DoS-UDP_Flood11.pcap_Flow.csv": {
+      "label": "DoS-UDP_Flood",
+      "start_window": "2022-08-12 09:38:00",
+      "end_window": "2022-08-12 12:00:00",
+      "total_windows": 143,
+      "observed_windows": 39,
+      "attack_flows": 57086,
+      "benign_flows": 0,
+      "total_flows": 57086
+    },
+    "DoS-UDP_Flood12.pcap_Flow.csv": {
+      "label": "DoS-UDP_Flood",
+      "start_window": "2022-08-12 12:00:00",
+      "end_window": "2022-08-12 14:32:00",
+      "total_windows": 153,
+      "observed_windows": 40,
+      "attack_flows": 50017,
+      "benign_flows": 0,
+      "total_flows": 50017
+    },
+    "DoS-UDP_Flood13.pcap_Flow.csv": {
+      "label": "DoS-UDP_Flood",
+      "start_window": "2022-08-12 14:32:00",
+      "end_window": "2022-08-12 15:47:00",
+      "total_windows": 76,
+      "observed_windows": 41,
+      "attack_flows": 59885,
+      "benign_flows": 0,
+      "total_flows": 59885
+    },
+    "DoS-UDP_Flood14.pcap_Flow.csv": {
+      "label": "DoS-UDP_Flood",
+      "start_window": "2022-08-12 15:47:00",
+      "end_window": "2022-08-15 10:04:00",
+      "total_windows": 3978,
+      "observed_windows": 53,
+      "attack_flows": 64565,
+      "benign_flows": 0,
+      "total_flows": 64565
+    },
+    "DoS-UDP_Flood15.pcap_Flow.csv": {
+      "label": "DoS-UDP_Flood",
+      "start_window": "2022-08-15 10:04:00",
+      "end_window": "2022-08-15 11:00:00",
+      "total_windows": 57,
+      "observed_windows": 47,
+      "attack_flows": 66453,
+      "benign_flows": 0,
+      "total_flows": 66453
+    },
+    "DoS-UDP_Flood16.pcap_Flow.csv": {
+      "label": "DoS-UDP_Flood",
+      "start_window": "2022-08-15 11:00:00",
+      "end_window": "2022-08-16 13:05:00",
+      "total_windows": 1566,
+      "observed_windows": 29,
+      "attack_flows": 35173,
+      "benign_flows": 0,
+      "total_flows": 35173
+    },
+    "DoS-UDP_Flood3.pcap_Flow.csv": {
+      "label": "DoS-UDP_Flood",
+      "start_window": "2022-08-10 12:42:00",
+      "end_window": "2022-08-10 13:21:00",
+      "total_windows": 40,
+      "observed_windows": 19,
+      "attack_flows": 589185,
+      "benign_flows": 0,
+      "total_flows": 589185
+    },
+    "DoS-UDP_Flood4.pcap_Flow.csv": {
+      "label": "DoS-UDP_Flood",
+      "start_window": "2022-08-10 13:28:00",
+      "end_window": "2022-08-10 15:47:00",
+      "total_windows": 140,
+      "observed_windows": 35,
+      "attack_flows": 901794,
+      "benign_flows": 0,
+      "total_flows": 901794
+    },
+    "DoS-UDP_Flood5.pcap_Flow.csv": {
+      "label": "DoS-UDP_Flood",
+      "start_window": "2022-08-10 15:47:00",
+      "end_window": "2022-08-10 17:09:00",
+      "total_windows": 83,
+      "observed_windows": 26,
+      "attack_flows": 842995,
+      "benign_flows": 0,
+      "total_flows": 842995
+    },
+    "DoS-UDP_Flood6.pcap_Flow.csv": {
+      "label": "DoS-UDP_Flood",
+      "start_window": "2022-08-10 17:09:00",
+      "end_window": "2022-08-10 17:36:00",
+      "total_windows": 28,
+      "observed_windows": 21,
+      "attack_flows": 862694,
+      "benign_flows": 0,
+      "total_flows": 862694
+    },
+    "DoS-UDP_Flood7.pcap_Flow.csv": {
+      "label": "DoS-UDP_Flood",
+      "start_window": "2022-08-10 17:36:00",
+      "end_window": "2022-08-11 11:53:00",
+      "total_windows": 1098,
+      "observed_windows": 35,
+      "attack_flows": 539459,
+      "benign_flows": 0,
+      "total_flows": 539459
+    },
+    "DoS-UDP_Flood8.pcap_Flow.csv": {
+      "label": "DoS-UDP_Flood",
+      "start_window": "2022-08-11 11:53:00",
+      "end_window": "2022-08-11 13:35:00",
+      "total_windows": 103,
+      "observed_windows": 53,
+      "attack_flows": 74524,
+      "benign_flows": 0,
+      "total_flows": 74524
+    },
+    "DoS-UDP_Flood9.pcap_Flow.csv": {
+      "label": "DoS-UDP_Flood",
+      "start_window": "2022-08-11 13:35:00",
+      "end_window": "2022-08-11 16:00:00",
+      "total_windows": 146,
+      "observed_windows": 50,
+      "attack_flows": 70798,
+      "benign_flows": 0,
+      "total_flows": 70798
+    },
+    "MITM-ArpSpoofing.pcap_Flow.csv": {
+      "label": "MITM-ArpSpoofing",
+      "start_window": "2022-10-17 17:20:00",
+      "end_window": "2022-10-18 16:34:00",
+      "total_windows": 1395,
+      "observed_windows": 250,
+      "attack_flows": 73033,
+      "benign_flows": 0,
+      "total_flows": 73033
+    },
+    "MITM-ArpSpoofing1.pcap_Flow.csv": {
+      "label": "MITM-ArpSpoofing",
+      "start_window": "2022-10-18 16:34:00",
+      "end_window": "2022-10-18 17:56:00",
+      "total_windows": 83,
+      "observed_windows": 30,
+      "attack_flows": 9349,
+      "benign_flows": 0,
+      "total_flows": 9349
+    },
+    "Mirai-greeth_flood.pcap_Flow.csv": {
+      "label": "Mirai-greeth_flood",
+      "start_window": "2023-01-12 11:19:00",
+      "end_window": "2023-01-12 11:37:00",
+      "total_windows": 19,
+      "observed_windows": 16,
+      "attack_flows": 5172,
+      "benign_flows": 0,
+      "total_flows": 5172
+    },
+    "Mirai-greeth_flood1.pcap_Flow.csv": {
+      "label": "Mirai-greeth_flood",
+      "start_window": "2023-01-12 11:37:00",
+      "end_window": "2023-01-12 12:11:00",
+      "total_windows": 35,
+      "observed_windows": 25,
+      "attack_flows": 10856,
+      "benign_flows": 0,
+      "total_flows": 10856
+    },
+    "Mirai-greeth_flood10.pcap_Flow.csv": {
+      "label": "Mirai-greeth_flood",
+      "start_window": "2023-01-12 15:42:00",
+      "end_window": "2023-01-13 10:50:00",
+      "total_windows": 1149,
+      "observed_windows": 29,
+      "attack_flows": 8187,
+      "benign_flows": 0,
+      "total_flows": 8187
+    },
+    "Mirai-greeth_flood11.pcap_Flow.csv": {
+      "label": "Mirai-greeth_flood",
+      "start_window": "2023-01-13 10:50:00",
+      "end_window": "2023-01-13 11:32:00",
+      "total_windows": 43,
+      "observed_windows": 37,
+      "attack_flows": 8377,
+      "benign_flows": 0,
+      "total_flows": 8377
+    },
+    "Mirai-greeth_flood12.pcap_Flow.csv": {
+      "label": "Mirai-greeth_flood",
+      "start_window": "2023-01-13 11:32:00",
+      "end_window": "2023-01-13 12:21:00",
+      "total_windows": 50,
+      "observed_windows": 30,
+      "attack_flows": 6423,
+      "benign_flows": 0,
+      "total_flows": 6423
+    },
+    "Mirai-greeth_flood13.pcap_Flow.csv": {
+      "label": "Mirai-greeth_flood",
+      "start_window": "2023-01-13 12:21:00",
+      "end_window": "2023-01-13 13:15:00",
+      "total_windows": 55,
+      "observed_windows": 38,
+      "attack_flows": 10306,
+      "benign_flows": 0,
+      "total_flows": 10306
+    },
+    "Mirai-greeth_flood14.pcap_Flow.csv": {
+      "label": "Mirai-greeth_flood",
+      "start_window": "2023-01-13 13:15:00",
+      "end_window": "2023-01-13 13:34:00",
+      "total_windows": 20,
+      "observed_windows": 19,
+      "attack_flows": 2977,
+      "benign_flows": 0,
+      "total_flows": 2977
+    },
+    "Mirai-greeth_flood15.pcap_Flow.csv": {
+      "label": "Mirai-greeth_flood",
+      "start_window": "2023-01-13 13:34:00",
+      "end_window": "2023-01-16 09:19:00",
+      "total_windows": 4066,
+      "observed_windows": 20,
+      "attack_flows": 3247,
+      "benign_flows": 0,
+      "total_flows": 3247
+    },
+    "Mirai-greeth_flood16.pcap_Flow.csv": {
+      "label": "Mirai-greeth_flood",
+      "start_window": "2023-01-16 09:19:00",
+      "end_window": "2023-01-16 09:44:00",
+      "total_windows": 26,
+      "observed_windows": 18,
+      "attack_flows": 4438,
+      "benign_flows": 0,
+      "total_flows": 4438
+    },
+    "Mirai-greeth_flood17.pcap_Flow.csv": {
+      "label": "Mirai-greeth_flood",
+      "start_window": "2023-01-16 09:44:00",
+      "end_window": "2023-01-16 10:03:00",
+      "total_windows": 20,
+      "observed_windows": 17,
+      "attack_flows": 2790,
+      "benign_flows": 0,
+      "total_flows": 2790
+    },
+    "Mirai-greeth_flood18.pcap_Flow.csv": {
+      "label": "Mirai-greeth_flood",
+      "start_window": "2023-01-16 10:03:00",
+      "end_window": "2023-01-16 10:22:00",
+      "total_windows": 20,
+      "observed_windows": 17,
+      "attack_flows": 3265,
+      "benign_flows": 0,
+      "total_flows": 3265
+    },
+    "Mirai-greeth_flood19.pcap_Flow.csv": {
+      "label": "Mirai-greeth_flood",
+      "start_window": "2023-01-16 10:22:00",
+      "end_window": "2023-01-16 10:38:00",
+      "total_windows": 17,
+      "observed_windows": 13,
+      "attack_flows": 3481,
+      "benign_flows": 0,
+      "total_flows": 3481
+    },
+    "Mirai-greeth_flood2.pcap_Flow.csv": {
+      "label": "Mirai-greeth_flood",
+      "start_window": "2023-01-12 12:11:00",
+      "end_window": "2023-01-12 12:32:00",
+      "total_windows": 22,
+      "observed_windows": 16,
+      "attack_flows": 4071,
+      "benign_flows": 0,
+      "total_flows": 4071
+    },
+    "Mirai-greeth_flood20.pcap_Flow.csv": {
+      "label": "Mirai-greeth_flood",
+      "start_window": "2023-01-16 10:38:00",
+      "end_window": "2023-01-16 11:02:00",
+      "total_windows": 25,
+      "observed_windows": 19,
+      "attack_flows": 4100,
+      "benign_flows": 0,
+      "total_flows": 4100
+    },
+    "Mirai-greeth_flood21.pcap_Flow.csv": {
+      "label": "Mirai-greeth_flood",
+      "start_window": "2023-01-16 11:02:00",
+      "end_window": "2023-01-16 11:35:00",
+      "total_windows": 34,
+      "observed_windows": 23,
+      "attack_flows": 4507,
+      "benign_flows": 0,
+      "total_flows": 4507
+    },
+    "Mirai-greeth_flood22.pcap_Flow.csv": {
+      "label": "Mirai-greeth_flood",
+      "start_window": "2023-01-16 11:35:00",
+      "end_window": "2023-01-17 11:26:00",
+      "total_windows": 1432,
+      "observed_windows": 23,
+      "attack_flows": 6609,
+      "benign_flows": 0,
+      "total_flows": 6609
+    },
+    "Mirai-greeth_flood23.pcap_Flow.csv": {
+      "label": "Mirai-greeth_flood",
+      "start_window": "2023-01-17 11:26:00",
+      "end_window": "2023-01-17 11:56:00",
+      "total_windows": 31,
+      "observed_windows": 22,
+      "attack_flows": 4572,
+      "benign_flows": 0,
+      "total_flows": 4572
+    },
+    "Mirai-greeth_flood24.pcap_Flow.csv": {
+      "label": "Mirai-greeth_flood",
+      "start_window": "2023-01-17 11:56:00",
+      "end_window": "2023-01-17 12:12:00",
+      "total_windows": 17,
+      "observed_windows": 14,
+      "attack_flows": 2546,
+      "benign_flows": 0,
+      "total_flows": 2546
+    },
+    "Mirai-greeth_flood25.pcap_Flow.csv": {
+      "label": "Mirai-greeth_flood",
+      "start_window": "2023-01-17 12:12:00",
+      "end_window": "2023-01-18 09:17:00",
+      "total_windows": 1266,
+      "observed_windows": 15,
+      "attack_flows": 2500,
+      "benign_flows": 0,
+      "total_flows": 2500
+    },
+    "Mirai-greeth_flood26.pcap_Flow.csv": {
+      "label": "Mirai-greeth_flood",
+      "start_window": "2023-01-18 09:17:00",
+      "end_window": "2023-01-18 10:44:00",
+      "total_windows": 88,
+      "observed_windows": 29,
+      "attack_flows": 5482,
+      "benign_flows": 0,
+      "total_flows": 5482
+    },
+    "Mirai-greeth_flood27.pcap_Flow.csv": {
+      "label": "Mirai-greeth_flood",
+      "start_window": "2023-01-18 10:44:00",
+      "end_window": "2023-01-18 11:18:00",
+      "total_windows": 35,
+      "observed_windows": 25,
+      "attack_flows": 7602,
+      "benign_flows": 0,
+      "total_flows": 7602
+    },
+    "Mirai-greeth_flood28.pcap_Flow.csv": {
+      "label": "Mirai-greeth_flood",
+      "start_window": "2023-01-18 11:18:00",
+      "end_window": "2023-01-18 11:52:00",
+      "total_windows": 35,
+      "observed_windows": 29,
+      "attack_flows": 8451,
+      "benign_flows": 0,
+      "total_flows": 8451
+    },
+    "Mirai-greeth_flood3.pcap_Flow.csv": {
+      "label": "Mirai-greeth_flood",
+      "start_window": "2023-01-12 12:32:00",
+      "end_window": "2023-01-12 12:51:00",
+      "total_windows": 20,
+      "observed_windows": 15,
+      "attack_flows": 4647,
+      "benign_flows": 0,
+      "total_flows": 4647
+    },
+    "Mirai-greeth_flood4.pcap_Flow.csv": {
+      "label": "Mirai-greeth_flood",
+      "start_window": "2023-01-12 12:51:00",
+      "end_window": "2023-01-12 13:24:00",
+      "total_windows": 34,
+      "observed_windows": 20,
+      "attack_flows": 9012,
+      "benign_flows": 0,
+      "total_flows": 9012
+    },
+    "Mirai-greeth_flood5.pcap_Flow.csv": {
+      "label": "Mirai-greeth_flood",
+      "start_window": "2023-01-12 13:24:00",
+      "end_window": "2023-01-12 13:43:00",
+      "total_windows": 20,
+      "observed_windows": 16,
+      "attack_flows": 3873,
+      "benign_flows": 0,
+      "total_flows": 3873
+    },
+    "Mirai-greeth_flood6.pcap_Flow.csv": {
+      "label": "Mirai-greeth_flood",
+      "start_window": "2023-01-12 13:43:00",
+      "end_window": "2023-01-12 14:13:00",
+      "total_windows": 31,
+      "observed_windows": 22,
+      "attack_flows": 11786,
+      "benign_flows": 0,
+      "total_flows": 11786
+    },
+    "Mirai-greeth_flood7.pcap_Flow.csv": {
+      "label": "Mirai-greeth_flood",
+      "start_window": "2023-01-12 14:13:00",
+      "end_window": "2023-01-12 14:40:00",
+      "total_windows": 28,
+      "observed_windows": 19,
+      "attack_flows": 7789,
+      "benign_flows": 0,
+      "total_flows": 7789
+    },
+    "Mirai-greeth_flood8.pcap_Flow.csv": {
+      "label": "Mirai-greeth_flood",
+      "start_window": "2023-01-12 14:40:00",
+      "end_window": "2023-01-12 14:57:00",
+      "total_windows": 18,
+      "observed_windows": 15,
+      "attack_flows": 5443,
+      "benign_flows": 0,
+      "total_flows": 5443
+    },
+    "Mirai-greeth_flood9.pcap_Flow.csv": {
+      "label": "Mirai-greeth_flood",
+      "start_window": "2023-01-12 14:57:00",
+      "end_window": "2023-01-12 15:42:00",
+      "total_windows": 46,
+      "observed_windows": 38,
+      "attack_flows": 12079,
+      "benign_flows": 0,
+      "total_flows": 12079
+    },
+    "SqlInjection.pcap_Flow.csv": {
+      "label": "SqlInjection",
+      "start_window": "2022-10-03 14:17:00",
+      "end_window": "2022-10-03 15:09:00",
+      "total_windows": 53,
+      "observed_windows": 17,
+      "attack_flows": 6603,
+      "benign_flows": 0,
+      "total_flows": 6603
+    },
+    "Uploading_Attack.pcap_Flow.csv": {
+      "label": "Uploading_Attack",
+      "start_window": "2023-02-14 12:52:00",
+      "end_window": "2023-02-14 13:05:00",
+      "total_windows": 14,
+      "observed_windows": 7,
+      "attack_flows": 1348,
+      "benign_flows": 0,
+      "total_flows": 1348
+    },
+    "VulnerabilityScan.pcap_Flow.csv": {
+      "label": "VulnerabilityScan",
+      "start_window": "2022-10-03 11:02:00",
+      "end_window": "2022-10-04 09:31:00",
+      "total_windows": 1350,
+      "observed_windows": 981,
+      "attack_flows": 442158,
+      "benign_flows": 0,
+      "total_flows": 442158
+    },
+    "XSS.pcap_Flow.csv": {
+      "label": "XSS",
+      "start_window": "2023-02-14 11:46:00",
+      "end_window": "2023-02-14 12:25:00",
+      "total_windows": 40,
+      "observed_windows": 22,
+      "attack_flows": 3377,
+      "benign_flows": 0,
+      "total_flows": 3377
+    }
+  }
+}

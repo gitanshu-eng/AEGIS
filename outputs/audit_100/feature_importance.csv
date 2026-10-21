@@ -1,0 +1,7 @@
+Feature,Gain_Importance
+attack_rate,0.7627
+velocity,0.0591
+acceleration,0.0543
+z_pkts,0.0452
+z_flows,0.041
+z_bytes,0.0377

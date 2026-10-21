@@ -1,0 +1,174 @@
+{
+  "freeze_id": "AEGIS-FREEZE-DBA9D5F",
+  "frozen_at": "2026-10-03T20:31:52.853291+00:00",
+  "git_commit": "dba9d5fc1fc0e8d8c6b1b6c4b7e993f91a4a6317",
+  "status": "FROZEN \u2014 DO NOT MODIFY PIPELINE OR OUTPUTS",
+  "architecture": {
+    "temporal_grid": "freq=1min, continuous, zero-filled, observed flag",
+    "canonical_cols": [
+      "time_window",
+      "total_flows",
+      "benign_flows",
+      "attack_flows",
+      "avg_flow_duration",
+      "avg_flow_bytes",
+      "avg_flow_packets",
+      "attack_rate",
+      "observed"
+    ],
+    "risk_formula": "(0.35\u00d7F + 0.35\u00d7A + 0.15\u00d7D + 0.15\u00d7P) \u00d7 100, bounded [0,100]",
+    "risk_levels": "LOW\u226430 / MEDIUM\u226460 / HIGH\u226480 / CRITICAL>80",
+    "forecast_model": "XGBoost LODO (Leave-One-Dataset-Out)",
+    "determinism": "strict \u2014 no stochastic elements in risk layer"
+  },
+  "datasets": {
+    "CIC-IDS2018": {
+      "files": 10,
+      "windows": 7008,
+      "observed": 4966,
+      "flows": 15822282,
+      "attacks": 2354266,
+      "attack_rate": "14.88%",
+      "status": "FROZEN"
+    },
+    "CIC-IDS2017": {
+      "files": 1,
+      "windows": 3130,
+      "observed": 2454,
+      "flows": 2830743,
+      "attacks": 557646,
+      "attack_rate": "19.70%",
+      "status": "FROZEN"
+    },
+    "CIC-IoT-DIAD-2024": {
+      "files": 1,
+      "windows": 315202,
+      "observed": 6868,
+      "flows": 26969077,
+      "attacks": 26570747,
+      "attack_rate": "98.52%",
+      "status": "FROZEN"
+    },
+    "CIC-APT-IIoT-2024": {
+      "files": 1,
+      "windows": 10164,
+      "observed": 10079,
+      "flows": 21599219,
+      "attacks": 1004,
+      "attack_rate": "0.005%",
+      "status": "FROZEN"
+    },
+    "CIC-BCCC-TabularIoT": {
+      "files": 1,
+      "windows": 481055,
+      "observed": 2115,
+      "flows": 3385313,
+      "attacks": 3352693,
+      "attack_rate": "99.04%",
+      "status": "FROZEN"
+    }
+  },
+  "phase_outputs": {
+    "phase1_checksums": {
+      "CIC-IDS2018 (Friday-02-03-2018)": {
+        "path": "data/processed/Friday-02-03-2018_temporal_continuous.csv",
+        "sha256": "502cb8301173dc1424d2118cf60ec939026c30311f4c633fd6218f75b9882d78"
+      },
+      "CIC-IDS2018 (Friday-16-02-2018)": {
+        "path": "data/processed/Friday-16-02-2018_temporal_continuous.csv",
+        "sha256": "be4d8437e91d2f836dba4e7383e49cad2e4a9f87f4f6856c9baf541bcbaa372d"
+      },
+      "CIC-IDS2018 (Friday-23-02-2018)": {
+        "path": "data/processed/Friday-23-02-2018_temporal_continuous.csv",
+        "sha256": "9c1223edd72daaaec0a55985432758ea72352bc84d8407aa22294a81f975c251"
+      },
+      "CIC-IDS2018 (Thuesday-20-02-2018)": {
+        "path": "data/processed/Thuesday-20-02-2018_temporal_continuous.csv",
+        "sha256": "d908d74e491262dd610bd936951b0605aeb255bb4c22a161a45d4557e7fcda62"
+      },
+      "CIC-IDS2018 (Thursday-01-03-2018)": {
+        "path": "data/processed/Thursday-01-03-2018_temporal_continuous.csv",
+        "sha256": "0f60d03fa221c4875d3cdedef4dc1a5363a6dbde30584305b9192bb26507623d"
+      },
+      "CIC-IDS2018 (Thursday-15-02-2018)": {
+        "path": "data/processed/Thursday-15-02-2018_temporal_continuous.csv",
+        "sha256": "02d290a35ea94976de96677683820dca6656da7bcafc38a8045d43deb2adb3a3"
+      },
+      "CIC-IDS2018 (Thursday-22-02-2018)": {
+        "path": "data/processed/Thursday-22-02-2018_temporal_continuous.csv",
+        "sha256": "056e1f6b2086477905be66f51fe93af6d7a83ee0359f32494528d1baf452ae8e"
+      },
+      "CIC-IDS2018 (Wednesday-14-02-2018)": {
+        "path": "data/processed/Wednesday-14-02-2018_temporal_continuous.csv",
+        "sha256": "2b3886e6804716fcf51755fc62305a37ca42f5b7a8d96ec9fdb09ef60edf81cb"
+      },
+      "CIC-IDS2018 (Wednesday-21-02-2018)": {
+        "path": "data/processed/Wednesday-21-02-2018_temporal_continuous.csv",
+        "sha256": "edcfbc1ab9098d4459b045fb6f80354c3899ac96494344210be6aeb39fa12299"
+      },
+      "CIC-IDS2018 (Wednesday-28-02-2018)": {
+        "path": "data/processed/Wednesday-28-02-2018_temporal_continuous.csv",
+        "sha256": "f30c77e7baad0461de10e9265866a98663921bee6169fc76e09a073ba68a04c2"
+      },
+      "CIC-IDS2017": {
+        "path": "data/processed/cic_ids2017_temporal_continuous.csv",
+        "sha256": "a5def64acca6f71d4415b30db2d8ac041304d25b3e0996f8c666c37e066c5b90"
+      },
+      "CIC-IoT-DIAD-2024": {
+        "path": "data/processed/cic_iot_diad_2024_temporal_continuous.csv",
+        "sha256": "b5e85728138455885bd677d5b37780cc0dd506849d9de0276b8a3017ab82a98f"
+      },
+      "CIC-APT-IIoT-2024": {
+        "path": "data/processed/cic_apt_iiot_2024_temporal_continuous.csv",
+        "sha256": "aeaef4bdde9b9bbdcab7525a867bed05d9e6bf2d63584acda77a3bd3fb6656fc"
+      },
+      "CIC-BCCC-TabularIoT-2024": {
+        "path": "data/processed/cic_bccc_tabular_iot_2024_temporal_continuous.csv",
+        "sha256": "1e0c6e2a22f0dee6283ea5b322f66f6775e40ea3b72a44cd8a1c8559a4f27bc6"
+      }
+    },
+    "phase2_forecasts": "data/final_forecasts/",
+    "phase3_incidents": "outputs/incident_records/",
+    "phase4_episodes": "outputs/phase4_investigations/",
+    "phase5_memory": "outputs/phase5_memory/phase5_memory_store.json",
+    "phase6_simulations": "outputs/phase6_simulations/",
+    "phase7_executions": "outputs/phase7_executions/",
+    "phase6b_executions": "outputs/phase6b_executions/"
+  },
+  "intelligence_summary": {
+    "total_windows": 817704,
+    "total_flows": 70606634,
+    "total_attacks": 32836356,
+    "overall_attack_rate": "46.51%",
+    "total_incidents": 21121,
+    "total_episodes": 49,
+    "memory_store_size": 49,
+    "sim_files": 18,
+    "exec7_files": 5,
+    "exec6b_files": 5
+  },
+  "safety_invariants": {
+    "all_executions_simulated": true,
+    "all_dry_run": true,
+    "all_soc_authorized": true,
+    "memory_calibration_quarantined": true,
+    "no_real_defensive_actions": true,
+    "mitre_mappings_not_ground_truth": true,
+    "forecast_not_attack_prediction": true
+  },
+  "limitations": [
+    "All datasets are historical \u2014 no live telemetry",
+    "Memory calibration QUARANTINED \u2014 simulated observations must not enter verified memory",
+    "MITRE mappings are candidate context only \u2014 not confirmed ground truth",
+    "Forecast indicates risk trajectory, NOT prediction of attack timing",
+    "CIC-BCCC-TabularIoT-2024: wide date range (Jan-Dec 2023) due to DoS UDP Flood timestamp spread \u2014 478,940 zero-filled windows",
+    "CIC-APT-IIoT-2024: 0.005% attack rate \u2014 extremely sparse, APT-characteristic",
+    "Phase 6/7 demos reuse same episode for each run \u2014 production will select dynamically"
+  ],
+  "next_steps": [
+    "FastAPI backend \u2014 expose Phase 1-6 outputs as typed JSON endpoints",
+    "React/Vite dashboard \u2014 AEGIS Command Center",
+    "End-to-end testing",
+    "Controlled live/lab validation \u2014 unlock real memory calibration"
+  ]
+}

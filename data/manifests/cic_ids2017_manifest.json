@@ -1,0 +1,89 @@
+{
+  "dataset_name": "CIC-IDS2017",
+  "temporal_resolution": "1min",
+  "total_windows": 3130,
+  "total_flows": 2830743,
+  "total_attack_flows": 557646,
+  "total_benign_flows": 2273097,
+  "attack_ratio": 0.196996,
+  "time_range": {
+    "start": "2017-07-03 01:00:00",
+    "end": "2017-07-07 12:59:00"
+  },
+  "canonical_columns": [
+    "time_window",
+    "attack_flows",
+    "benign_flows",
+    "total_flows",
+    "flow_bytes_sum",
+    "flow_packets_sum",
+    "flow_duration_mean",
+    "observed"
+  ],
+  "files": {
+    "Friday-WorkingHours-Afternoon-DDos.pcap_ISCX_continuous_1min.csv": {
+      "start_window": "2017-07-07 03:30:00",
+      "end_window": "2017-07-07 05:02:00",
+      "total_windows": 93,
+      "observed_windows": 93,
+      "attack_flows": 128027,
+      "benign_flows": 97718
+    },
+    "Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX_continuous_1min.csv": {
+      "start_window": "2017-07-07 01:00:00",
+      "end_window": "2017-07-07 03:29:00",
+      "total_windows": 150,
+      "observed_windows": 150,
+      "attack_flows": 158930,
+      "benign_flows": 127537
+    },
+    "Friday-WorkingHours-Morning.pcap_ISCX_continuous_1min.csv": {
+      "start_window": "2017-07-07 08:59:00",
+      "end_window": "2017-07-07 12:59:00",
+      "total_windows": 241,
+      "observed_windows": 241,
+      "attack_flows": 1966,
+      "benign_flows": 189067
+    },
+    "Monday-WorkingHours.pcap_ISCX_continuous_1min.csv": {
+      "start_window": "2017-07-03 01:00:00",
+      "end_window": "2017-07-03 12:59:00",
+      "total_windows": 720,
+      "observed_windows": 487,
+      "attack_flows": 0,
+      "benign_flows": 529918
+    },
+    "Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX_continuous_1min.csv": {
+      "start_window": "2017-07-06 01:00:00",
+      "end_window": "2017-07-06 05:04:00",
+      "total_windows": 245,
+      "observed_windows": 245,
+      "attack_flows": 36,
+      "benign_flows": 288566
+    },
+    "Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX_continuous_1min.csv": {
+      "start_window": "2017-07-06 08:59:00",
+      "end_window": "2017-07-06 12:59:00",
+      "total_windows": 241,
+      "observed_windows": 241,
+      "attack_flows": 2180,
+      "benign_flows": 168186
+    },
+    "Tuesday-WorkingHours.pcap_ISCX_continuous_1min.csv": {
+      "start_window": "2017-07-04 01:00:00",
+      "end_window": "2017-07-04 12:59:00",
+      "total_windows": 720,
+      "observed_windows": 488,
+      "attack_flows": 13835,
+      "benign_flows": 432074
+    },
+    "Wednesday-workingHours.pcap_ISCX_continuous_1min.csv": {
+      "start_window": "2017-07-05 01:00:00",
+      "end_window": "2017-07-05 12:59:00",
+      "total_windows": 720,
+      "observed_windows": 509,
+      "attack_flows": 252672,
+      "benign_flows": 440031
+    }
+  }
+}

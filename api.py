@@ -118,17 +118,17 @@ def list_datasets():
 
 @app.get("/api/health-public", include_in_schema=False)
 @app.get("/api/network-state", dependencies=[Depends(verify_key)])
-def get_network_state(dataset: str = Query(...), limit: int = Query(default=0, ge=0)):
+def get_network_state(dataset: str = Query(...), limit: int = Query(default=200, ge=0)):
     _require_dataset(dataset)
     path = _resolve_processed_path(dataset, "_temporal_continuous.csv")
     if not os.path.exists(path):
         raise HTTPException(status_code=404, detail=f"Phase 1 file not found for {dataset}")
-    df = pd.read_csv(path)
+    n = limit if limit > 0 else 200
+    df = pd.read_csv(path).tail(n)
     if "time_window" in df.columns: df = df.rename(columns={"time_window":"timestamp"})
     if "observed" in df.columns:
         df["observed"]   = df["observed"].astype(bool)
         df["unobserved"] = ~df["observed"]
-    if limit > 0: df = df.tail(limit)
     return _df_to_records(df)
 
 @app.get("/api/health-public", include_in_schema=False)

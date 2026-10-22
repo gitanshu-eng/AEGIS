@@ -18,7 +18,7 @@ export default function MonitorForecast({ dataset }: Props) {
 
   useEffect(() => {
     if (!dataset) return;
-    fetch(`${API}/api/forecast?dataset=${dataset}`, { headers: { 'X-API-Key': API_KEY } })
+    fetch(`${API}/api/forecasts?dataset=${dataset}`, { headers: { 'X-API-Key': API_KEY } })
       .then(r => r.json())
       .then(setRows)
       .catch(e => setError(e.message));

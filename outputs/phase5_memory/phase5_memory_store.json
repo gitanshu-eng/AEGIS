@@ -4936,5 +4936,81 @@
         0.0
       ]
     }
+  },
+  {
+    "memory_id": "EP-cic_apt_iiot_2024-2d29f1",
+    "dataset": "cic_apt_iiot_2024",
+    "structured_metadata": {
+      "peak_risk_level": "LOW",
+      "lead_lag_classification": "INDETERMINATE",
+      "sustained_tactics": [
+        "TA0043: Reconnaissance"
+      ]
+    },
+    "semantic_context": {
+      "kinematic_vector": [
+        0.1906,
+        0.0663,
+        0.1326,
+        0.2
+      ]
+    }
+  },
+  {
+    "memory_id": "EP-cic_apt_iiot_2024-2e45d6",
+    "dataset": "cic_apt_iiot_2024",
+    "structured_metadata": {
+      "peak_risk_level": "LOW",
+      "lead_lag_classification": "INDETERMINATE",
+      "sustained_tactics": [
+        "TA0043: Reconnaissance"
+      ]
+    },
+    "semantic_context": {
+      "kinematic_vector": [
+        0.0427,
+        0.014,
+        0.028,
+        0.0
+      ]
+    }
+  },
+  {
+    "memory_id": "EP-cic_apt_iiot_2024-a1e366",
+    "dataset": "cic_apt_iiot_2024",
+    "structured_metadata": {
+      "peak_risk_level": "LOW",
+      "lead_lag_classification": "INDETERMINATE",
+      "sustained_tactics": [
+        "TA0043: Reconnaissance"
+      ]
+    },
+    "semantic_context": {
+      "kinematic_vector": [
+        0.0391,
+        0.0137,
+        0.0274,
+        0.0
+      ]
+    }
+  },
+  {
+    "memory_id": "EP-cic_apt_iiot_2024-b5390d",
+    "dataset": "cic_apt_iiot_2024",
+    "structured_metadata": {
+      "peak_risk_level": "LOW",
+      "lead_lag_classification": "INDETERMINATE",
+      "sustained_tactics": [
+        "TA0043: Reconnaissance"
+      ]
+    },
+    "semantic_context": {
+      "kinematic_vector": [
+        0.0309,
+        0.0079,
+        0.0158,
+        0.0
+      ]
+    }
   }
 ]

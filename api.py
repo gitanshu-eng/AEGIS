@@ -159,6 +159,17 @@ def get_incidents(dataset: str = Query(...)):
         raise HTTPException(status_code=404, detail=f"Phase 3 file not found for {dataset}")
     with open(path) as f: raw = json.load(f)
     incidents = raw if isinstance(raw, list) else raw.get("incidents", [])
+    if len(incidents) > 500:
+        top_inc = sorted(incidents, key=lambda x: x.get("risk", {}).get("score", 0), reverse=True)[:50]
+        tail_inc = incidents[-450:]
+        seen = set()
+        merged = []
+        for x in top_inc + tail_inc:
+            iid = x.get("incident_id")
+            if iid not in seen:
+                seen.add(iid)
+                merged.append(x)
+        incidents = merged
     result = []
     for inc in incidents:
         ctx = inc.get("candidate_attack_context", {})

@@ -1,1 +1,159 @@
-[]
+[
+  {
+    "episode_id": "EP-cic_apt_iiot_2024-2d29f1",
+    "dataset": "cic_apt_iiot_2024",
+    "investigation_state": "NEW",
+    "temporal_bounds": {
+      "start_time": "2023-12-04 03:03:00",
+      "end_time": "2023-12-04 03:04:00",
+      "duration_minutes": 2
+    },
+    "risk_profile": {
+      "peak_risk_score": 19.06,
+      "peak_risk_level": "LOW"
+    },
+    "dominant_signal_at_peak": "Forecast",
+    "forecast_behavior": {
+      "classification": "INDETERMINATE",
+      "lead_time_minutes": 0,
+      "f_time": null,
+      "b_time": null
+    },
+    "candidate_mitre_summary": {
+      "sustained_tactics": [
+        "TA0043: Reconnaissance"
+      ],
+      "sustained_techniques": [
+        "T1595: Active Scanning"
+      ]
+    },
+    "raw_evidence_at_peak": {
+      "total_flows": 1200,
+      "benign_flows": 1120,
+      "attack_flows": 80,
+      "attack_rate": 0.0663
+    },
+    "investigation_summary": "Investigation Episode EP-cic_apt_iiot_2024-2d29f1 spans 2 minutes, peaking at a LOW risk state (Score: 19.06). The dominant kinematic driver at peak was Forecast. Sustained MITRE ATT&CK behaviors: TA0043: Reconnaissance. Physical evidence at peak: 6.6% attack rate. Prediction vs. Reality: Forecast was INDETERMINATE (Lead time: 0 min).",
+    "constituent_incident_ids": [
+      "INC-cic_apt_iiot_2024-08898-281990d3",
+      "INC-cic_apt_iiot_2024-08899-7e23ad02"
+    ]
+  },
+  {
+    "episode_id": "EP-cic_apt_iiot_2024-2e45d6",
+    "dataset": "cic_apt_iiot_2024",
+    "investigation_state": "NEW",
+    "temporal_bounds": {
+      "start_time": "2023-12-02 13:43:00",
+      "end_time": "2023-12-02 13:43:00",
+      "duration_minutes": 1
+    },
+    "risk_profile": {
+      "peak_risk_score": 4.27,
+      "peak_risk_level": "LOW"
+    },
+    "dominant_signal_at_peak": "Forecast",
+    "forecast_behavior": {
+      "classification": "INDETERMINATE",
+      "lead_time_minutes": 0,
+      "f_time": null,
+      "b_time": null
+    },
+    "candidate_mitre_summary": {
+      "sustained_tactics": [
+        "TA0043: Reconnaissance"
+      ],
+      "sustained_techniques": [
+        "T1595: Active Scanning"
+      ]
+    },
+    "raw_evidence_at_peak": {
+      "total_flows": 1200,
+      "benign_flows": 1183,
+      "attack_flows": 17,
+      "attack_rate": 0.014
+    },
+    "investigation_summary": "Investigation Episode EP-cic_apt_iiot_2024-2e45d6 spans 1 minutes, peaking at a LOW risk state (Score: 4.27). The dominant kinematic driver at peak was Forecast. Sustained MITRE ATT&CK behaviors: TA0043: Reconnaissance. Physical evidence at peak: 1.4% attack rate. Prediction vs. Reality: Forecast was INDETERMINATE (Lead time: 0 min).",
+    "constituent_incident_ids": [
+      "INC-cic_apt_iiot_2024-06658-15ea1a05"
+    ]
+  },
+  {
+    "episode_id": "EP-cic_apt_iiot_2024-a1e366",
+    "dataset": "cic_apt_iiot_2024",
+    "investigation_state": "NEW",
+    "temporal_bounds": {
+      "start_time": "2023-12-03 08:18:00",
+      "end_time": "2023-12-03 08:18:00",
+      "duration_minutes": 1
+    },
+    "risk_profile": {
+      "peak_risk_score": 3.91,
+      "peak_risk_level": "LOW"
+    },
+    "dominant_signal_at_peak": "Forecast",
+    "forecast_behavior": {
+      "classification": "INDETERMINATE",
+      "lead_time_minutes": 0,
+      "f_time": null,
+      "b_time": null
+    },
+    "candidate_mitre_summary": {
+      "sustained_tactics": [
+        "TA0043: Reconnaissance"
+      ],
+      "sustained_techniques": [
+        "T1595: Active Scanning"
+      ]
+    },
+    "raw_evidence_at_peak": {
+      "total_flows": 1200,
+      "benign_flows": 1184,
+      "attack_flows": 16,
+      "attack_rate": 0.0137
+    },
+    "investigation_summary": "Investigation Episode EP-cic_apt_iiot_2024-a1e366 spans 1 minutes, peaking at a LOW risk state (Score: 3.91). The dominant kinematic driver at peak was Forecast. Sustained MITRE ATT&CK behaviors: TA0043: Reconnaissance. Physical evidence at peak: 1.4% attack rate. Prediction vs. Reality: Forecast was INDETERMINATE (Lead time: 0 min).",
+    "constituent_incident_ids": [
+      "INC-cic_apt_iiot_2024-07773-21924357"
+    ]
+  },
+  {
+    "episode_id": "EP-cic_apt_iiot_2024-b5390d",
+    "dataset": "cic_apt_iiot_2024",
+    "investigation_state": "NEW",
+    "temporal_bounds": {
+      "start_time": "2023-12-02 00:31:00",
+      "end_time": "2023-12-02 00:31:00",
+      "duration_minutes": 1
+    },
+    "risk_profile": {
+      "peak_risk_score": 3.09,
+      "peak_risk_level": "LOW"
+    },
+    "dominant_signal_at_peak": "Forecast",
+    "forecast_behavior": {
+      "classification": "INDETERMINATE",
+      "lead_time_minutes": 0,
+      "f_time": null,
+      "b_time": null
+    },
+    "candidate_mitre_summary": {
+      "sustained_tactics": [
+        "TA0043: Reconnaissance"
+      ],
+      "sustained_techniques": [
+        "T1595: Active Scanning"
+      ]
+    },
+    "raw_evidence_at_peak": {
+      "total_flows": 1200,
+      "benign_flows": 1191,
+      "attack_flows": 9,
+      "attack_rate": 0.0079
+    },
+    "investigation_summary": "Investigation Episode EP-cic_apt_iiot_2024-b5390d spans 1 minutes, peaking at a LOW risk state (Score: 3.09). The dominant kinematic driver at peak was Forecast. Sustained MITRE ATT&CK behaviors: TA0043: Reconnaissance. Physical evidence at peak: 0.8% attack rate. Prediction vs. Reality: Forecast was INDETERMINATE (Lead time: 0 min).",
+    "constituent_incident_ids": [
+      "INC-cic_apt_iiot_2024-05866-c73a36ae"
+    ]
+  }
+]

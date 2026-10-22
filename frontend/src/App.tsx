@@ -145,7 +145,7 @@ export default function App() {
 
           <ScenarioRunnerBanner />
 
-          {loading || !kpi ? (
+          {(loading || !kpi) && currentNav !== "SYSTEM_PIPELINE" && currentNav !== "SYSTEM_MODELS" ? (
             <div className="p-8 text-center text-xs font-mono text-slate-500 animate-pulse">
               {!backendReady ? "Waking AEGIS backend — Render cold start, may take 15–30s..." : "Querying AEGIS Telemetry Engine..."}
             </div>
@@ -219,10 +219,10 @@ export default function App() {
                 <LiveFeedView dataset={selectedDataset} />
               )}
 
-              {currentNav === "SYSTEM_PIPELINE" && <PipelineExplorer />}
-               {currentNav === "SYSTEM_MODELS" && <ModelStatus />}
             </>
           )}
+          {currentNav === "SYSTEM_PIPELINE" && <PipelineExplorer />}
+          {currentNav === "SYSTEM_MODELS" && <ModelStatus />}
         </main>
       </div>
     </div>

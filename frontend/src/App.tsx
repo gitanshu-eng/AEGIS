@@ -61,10 +61,25 @@ export default function App() {
       fetchEpisodes(selectedDataset),
     ])
       .then(([kpiResult, timelineResult, episodesResult]) => {
-        if (kpiResult.status === 'fulfilled') setKpi(kpiResult.value);
-        else { console.error(kpiResult.reason); setKpi({} as any); }
+        if (kpiResult.status === 'fulfilled') {
+          setKpi(kpiResult.value);
+        } else {
+          console.error('KPI fetch failed:', kpiResult.reason);
+          setKpi({
+            current_flows_min: 0,
+            attack_activity_rate: 0,
+            escalation_probability: 0,
+            risk_score: 0,
+            risk_severity: 'LOW',
+            risk_contributors: { forecast: 0, activity: 0, velocity: 0, persistence: 0 },
+            active_episodes_count: 0,
+            active_episodes_severity: 'LOW',
+          });
+        }
         if (timelineResult.status === 'fulfilled') setTimeline(timelineResult.value);
+        else setTimeline([]);
         if (episodesResult.status === 'fulfilled') setEpisodes(episodesResult.value);
+        else setEpisodes([]);
       })
       .finally(() => setLoading(false));
   }, [selectedDataset, backendReady]);
@@ -153,7 +168,7 @@ export default function App() {
             <>
               {currentNav === "COMMAND_CENTER" && (
                 <>
-                  <KPICards kpi={kpi} />
+                  {kpi && <KPICards kpi={kpi} />}
                   <NetworkTimeline data={timeline} />
                   {activeEpisode && (
                     <div className="mt-8 pt-6 border-t border-slate-800/80">

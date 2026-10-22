@@ -31,8 +31,8 @@ export async function fetchKPISummary(dataset: string): Promise<KPISummary> {
       ? recent.reduce((s, r) => s + (r.attack_rate ?? 0), 0) / recent.length
       : 0;
 
-  const scores = incidents.map((i) => i.risk_score ?? 0);
-  const peakRisk = scores.length > 0 ? Math.max(...scores) : 0;
+  const scores = incidents.map((i) => i.risk?.score ?? i.risk_score ?? 0);
+  const peakRisk = scores.reduce((max, s) => (s > max ? s : max), 0);
   const avgRisk = scores.length > 0 ? scores.reduce((a, b) => a + b, 0) / scores.length : 0;
   const riskScore = Math.round(peakRisk * 0.6 + avgRisk * 0.4);
   const severity =
@@ -40,7 +40,7 @@ export async function fetchKPISummary(dataset: string): Promise<KPISummary> {
 
   const avgForecast =
     incidents.length > 0
-      ? incidents.reduce((s, i) => s + (i.escalation_probability ?? 0), 0) / incidents.length
+      ? incidents.reduce((s, i) => s + (i.forecast?.escalation_probability ?? i.escalation_probability ?? 0), 0) / incidents.length
       : escalationProb;
 
   return {

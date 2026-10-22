@@ -25,16 +25,18 @@ function parsePair(s: string): { id: string; name: string } {
 
 export default function MitreContextView({ dataset }: Props) {
   const [episodes, setEpisodes] = useState<Episode[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
   const [selected, setSelected] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     if (!dataset) return;
-    setEpisodes([]); setSelected(null); setError(null);
+    setEpisodes([]); setSelected(null); setError(null); setLoading(true);
     fetch(`${API}/api/episodes?dataset=${dataset}`, { headers: { 'X-API-Key': API_KEY } })
       .then(r => r.json())
-      .then(setEpisodes)
-      .catch(e => setError(e.message));
+      .then(data => setEpisodes(Array.isArray(data) ? data : []))
+      .catch(e => setError(e.message))
+      .finally(() => setLoading(false));
   }, [dataset]);
 
   if (error) return (
@@ -42,9 +44,14 @@ export default function MitreContextView({ dataset }: Props) {
       Error: {error}
     </div>
   );
-  if (!episodes.length) return (
+  if (loading) return (
     <div className="p-8 text-center text-xs font-mono text-slate-500 animate-pulse">
       Loading MITRE ATT&CK data...
+    </div>
+  );
+  if (!episodes.length) return (
+    <div className="p-8 text-center text-xs font-mono text-slate-500">
+      No MITRE ATT&CK episode context available for this dataset.
     </div>
   );
 

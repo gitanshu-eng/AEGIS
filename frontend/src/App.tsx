@@ -55,17 +55,17 @@ export default function App() {
   useEffect(() => {
     if (!backendReady) return;
     setLoading(true);
-    Promise.all([
+    Promise.allSettled([
       fetchKPISummary(selectedDataset),
       fetchTimeline(selectedDataset),
       fetchEpisodes(selectedDataset),
     ])
-      .then(([kpiData, timelineData, episodesData]) => {
-        setKpi(kpiData);
-        setTimeline(timelineData);
-        setEpisodes(episodesData);
+      .then(([kpiResult, timelineResult, episodesResult]) => {
+        if (kpiResult.status === 'fulfilled') setKpi(kpiResult.value);
+        else { console.error(kpiResult.reason); setKpi({} as any); }
+        if (timelineResult.status === 'fulfilled') setTimeline(timelineResult.value);
+        if (episodesResult.status === 'fulfilled') setEpisodes(episodesResult.value);
       })
-      .catch((err) => console.error(err))
       .finally(() => setLoading(false));
   }, [selectedDataset, backendReady]);
 
@@ -181,9 +181,7 @@ export default function App() {
                 <MonitorRisk dataset={selectedDataset} />
               )}
 
-              {currentNav === "INVESTIGATE_EPISODES" && activeEpisode && (
-                <EpisodeDossier episode={activeEpisode} />
-              )}
+              {currentNav === "INVESTIGATE_EPISODES" && (activeEpisode ? <EpisodeDossier episode={activeEpisode} /> : <div className="p-8 text-center text-xs font-mono text-slate-500">No episodes found for this dataset.</div>)}
 
               {currentNav === "INVESTIGATE_EVIDENCE" && (
                 <DatasetWorkspace episodes={episodes} timeline={timeline} />
@@ -197,21 +195,9 @@ export default function App() {
                 <MemoryViewer dataset={selectedDataset} />
               )}
 
-              {currentNav === "SIMULATE_COUNTERFACTUALS" && activeEpisode && (
-                <CounterfactualMatrix
-                  episodeId={activeEpisode.episode_id}
-                  baselineRisk={activeEpisode.peak_risk}
-                  dataset={selectedDataset}
-                />
-              )}
+              {currentNav === "SIMULATE_COUNTERFACTUALS" && (activeEpisode ? <CounterfactualMatrix episodeId={activeEpisode.episode_id} baselineRisk={activeEpisode.peak_risk} dataset={selectedDataset} /> : <div className="p-8 text-center text-xs font-mono text-slate-500">No episodes available for counterfactual simulation.</div>)}
 
-              {currentNav === "DEFENSE_ACTIONS" && activeEpisode && (
-                <Phase6BDefenseExecution
-                  baselineRisk={activeEpisode.peak_risk}
-                  episodeId={activeEpisode.episode_id}
-                  dataset={selectedDataset}
-                />
-              )}
+              {currentNav === "DEFENSE_ACTIONS" && (activeEpisode ? <Phase6BDefenseExecution baselineRisk={activeEpisode.peak_risk} episodeId={activeEpisode.episode_id} dataset={selectedDataset} /> : <div className="p-8 text-center text-xs font-mono text-slate-500">No episodes available for defense dispatch.</div>)}
 
               {currentNav === "VERIFY_OUTCOMES" && <LiveLabWorkspace />}
 

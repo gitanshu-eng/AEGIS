@@ -31,7 +31,7 @@ export default function MitreContextView({ dataset }: Props) {
   useEffect(() => {
     if (!dataset) return;
     setEpisodes([]); setSelected(null); setError(null);
-    fetch(`${API}/api/episodes?dataset=${encodeURIComponent(dataset)}`, { headers: { "X-API-Key": API_KEY } })
+    fetch(`${API}/api/mitre-context?dataset=${dataset}`, { headers: { 'X-API-Key': API_KEY } })
       .then(r => r.json())
       .then(setEpisodes)
       .catch(e => setError(e.message));

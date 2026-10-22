@@ -20,7 +20,7 @@ export default function MonitorRisk({ dataset }: Props) {
 
   useEffect(() => {
     if (!dataset) return;
-    fetch(`${API}/api/network-state?dataset=${dataset}&limit=60`)
+    fetch(`${API}/api/risk?dataset=${dataset}`, { headers: { 'X-API-Key': API_KEY } })
       .then(r => r.json())
       .then(setRows)
       .catch(e => setError(e.message));

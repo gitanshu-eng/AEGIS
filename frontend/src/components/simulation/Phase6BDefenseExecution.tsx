@@ -39,7 +39,7 @@ const MEASURES: CounterMeasure[] = [
     simulatedRisk: 31,
     forwardPayload: 'ovs-vsctl set port tap-soc-host tag=999 # Quarantine Subnet 172.31.32.14',
     rollbackPayload: 'ovs-vsctl remove port tap-soc-host tag 999 # Restore Normal Port Access',
-    description: 'Moves target host virtual interface to isolated sinkhole VLAN 999, preventing lateral spread.'
+    description: 'Cuts off the infected device from the rest of the network to stop the attack from spreading.'
   },
   {
     id: 'token-bucket',
@@ -50,7 +50,7 @@ const MEASURES: CounterMeasure[] = [
     simulatedRisk: 54,
     forwardPayload: 'tc qdisc add dev eth0 root handle 1: cbq avpkt 1000 bandwidth 100mbit',
     rollbackPayload: 'tc qdisc del dev eth0 root # Clear Active Traffic Shaper',
-    description: 'Throttles inbound burst traffic matching anomalous forward inter-arrival time profiles.'
+    description: 'Reduces the speed of incoming traffic that looks suspicious, buying time to investigate.'
   },
   {
     id: 'bpf-drop',
@@ -61,7 +61,7 @@ const MEASURES: CounterMeasure[] = [
     simulatedRisk: 42,
     forwardPayload: 'tc filter add dev eth0 ingress bpf da obj drop_exploit.o sec classifier',
     rollbackPayload: 'tc filter del dev eth0 ingress # Remove Active eBPF Program',
-    description: 'Drops inbound probe frames at the driver layer using early eBPF filter classification.'
+    description: 'Automatically discards incoming traffic identified as malicious before it reaches the system.'
   }
 ];
 

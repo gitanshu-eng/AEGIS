@@ -146,9 +146,9 @@ export const LiveFeedView: React.FC<{ dataset: string }> = ({ dataset }) => {
         </div>
       )}
 
-      {/* Raw Tick Log */}
+      {/* Raw Live Feed Log */}
       <div className="p-4 rounded-xl bg-slate-900/60 border border-slate-800">
-        <div className="text-xs font-mono text-slate-400 mb-3 uppercase tracking-wider">Tick Log</div>
+        <div className="text-xs font-mono text-slate-400 mb-3 uppercase tracking-wider">Live Feed Log</div>
         <div className="space-y-1 max-h-64 overflow-y-auto">
           {[...ticks].reverse().map((t, i) => (
             <div key={i} className="flex items-center gap-3 text-[11px] font-mono py-1 border-b border-slate-800/60">

@@ -43,7 +43,7 @@ const MEASURES: CounterMeasure[] = [
   },
   {
     id: 'token-bucket',
-    name: 'Token-Bucket Ingress Throttling',
+    name: 'Slow Down Suspicious Traffic',
     type: 'Traffic Rate Shaping',
     blastRadius: 'MINIMAL',
     latency: '45ms',
@@ -54,7 +54,7 @@ const MEASURES: CounterMeasure[] = [
   },
   {
     id: 'bpf-drop',
-    name: 'eBPF / Suricata Signature Drop',
+    name: 'Block Malicious Packets',
     type: 'Kernel Ingress Filter',
     blastRadius: 'MODERATE',
     latency: '25ms',
@@ -268,7 +268,7 @@ export const Phase6BDefenseExecution: React.FC<Phase6BDefenseExecutionProps> = (
               <p className="text-xs text-slate-400 mb-3">{m.description}</p>
               
               <div className="flex items-center justify-between pt-2 border-t border-slate-800 text-xs">
-                <span className="text-slate-400">Simulated Risk:</span>
+                <span className="text-slate-400">Predicted Risk After Action:</span>
                 <span className="font-mono font-bold text-emerald-400">{baselineRisk} &rarr; {m.simulatedRisk}</span>
               </div>
             </button>
@@ -282,7 +282,7 @@ export const Phase6BDefenseExecution: React.FC<Phase6BDefenseExecutionProps> = (
           <div className="flex items-center gap-2">
             <Terminal className="w-4 h-4 text-cyan-400" />
             <span className="text-xs font-mono font-bold uppercase tracking-wider text-slate-300">
-              Payload Specifications: {activeMeasure.name}
+              Technical Details: {activeMeasure.name}
             </span>
           </div>
           <span className="text-xs font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-400 border border-slate-800">
@@ -372,7 +372,7 @@ export const Phase6BDefenseExecution: React.FC<Phase6BDefenseExecutionProps> = (
               <div className="bg-slate-950 p-3 rounded border border-slate-800 font-mono space-y-1">
                 <div>Action: <span className="text-cyan-400">{activeMeasure.name}</span></div>
                 <div>Target Episode: <span className="text-cyan-400">{episodeId}</span></div>
-                <div>Blast Radius: <span className="text-emerald-400">{activeMeasure.blastRadius}</span></div>
+                <div>Impact Level: <span className="text-emerald-400">{activeMeasure.blastRadius}</span></div>
                 <div>Rollback TTL: <span className="text-amber-400">300s (Auto-revert enabled)</span></div>
               </div>
 

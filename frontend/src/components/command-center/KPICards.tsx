@@ -56,14 +56,14 @@ export const KPICards: React.FC<Props> = ({ kpi }) => {
           <div>Fcst: {(kpi.risk_contributors.forecast * 100).toFixed(0)}%</div>
           <div>Act: {(kpi.risk_contributors.activity * 100).toFixed(0)}%</div>
           <div>Vel: {(kpi.risk_contributors.velocity * 100).toFixed(0)}%</div>
-          <div>Per: {(kpi.risk_contributors.persistence * 100).toFixed(0)}%</div>
+          <div>Duration: {(kpi.risk_contributors.persistence * 100).toFixed(0)}%</div>
         </div>
       </div>
 
       {/* 4. Active Investigations (Phase 4) */}
       <div className="p-4 rounded-xl bg-slate-900/60 border border-slate-800 backdrop-blur-md">
         <div className="flex items-center justify-between text-slate-400 mb-2">
-          <span className="text-xs uppercase tracking-wider font-semibold">Triage Queue</span>
+          <span className="text-xs uppercase tracking-wider font-semibold">Active Threats</span>
           <Search className="w-4 h-4 text-cyan-400" />
         </div>
         <div className="flex items-baseline gap-2 mb-1">

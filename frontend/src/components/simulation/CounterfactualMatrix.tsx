@@ -140,7 +140,7 @@ export const CounterfactualMatrix: React.FC<Props> = ({
               COUNTERFACTUAL SIMULATION MATRIX (PHASE 6)
             </div>
             <p className="text-[11px] text-slate-400 mt-0.5">
-              Comparative impact estimation across candidate intervention protocols.
+              See how each response action would change the risk score.
             </p>
           </div>
           <span className="text-[10px] px-2.5 py-1 rounded bg-purple-950/70 border border-purple-500/40 text-purple-300 font-mono font-bold tracking-tight">
@@ -168,7 +168,7 @@ export const CounterfactualMatrix: React.FC<Props> = ({
                   <tr className="border-b border-slate-800 text-slate-500 text-[11px]">
                     <th className="pb-2">Intervention Strategy</th>
                     <th className="pb-2 text-center">Baseline</th>
-                    <th className="pb-2 text-center text-cyan-400">Simulated Risk</th>
+                    <th className="pb-2 text-center text-cyan-400">Risk After Action</th>
                     <th className="pb-2 text-center">Reduction</th>
                     <th className="pb-2 text-right">Action</th>
                   </tr>

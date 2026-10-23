@@ -35,21 +35,21 @@ export const DatasetWorkspace: React.FC<Props> = ({ episodes, timeline }) => {
 
         <div className="p-4 rounded-xl bg-slate-900/60 border border-slate-800 backdrop-blur-md">
           <div className="flex items-center justify-between text-slate-400 mb-2">
-            <span className="text-xs uppercase tracking-wider font-semibold font-mono">Capture Continuity</span>
+            <span className="text-xs uppercase tracking-wider font-semibold font-mono">Data Coverage</span>
             <Radio className="w-4 h-4 text-emerald-400" />
           </div>
           <div className="text-2xl font-bold font-mono text-emerald-300 mb-1">
             {continuityPct}%
           </div>
           <div className="text-[11px] text-slate-400 pt-2 border-t border-slate-800/80 font-mono flex justify-between">
-            <span>Observed: {observedCount} min</span>
-            <span className="text-amber-400">Gaps: {unobservedCount} min</span>
+            <span>Monitored: {observedCount} min</span>
+            <span className="text-amber-400">Missing Windows: {unobservedCount} min</span>
           </div>
         </div>
 
         <div className="p-4 rounded-xl bg-slate-900/60 border border-slate-800 backdrop-blur-md">
           <div className="flex items-center justify-between text-slate-400 mb-2">
-            <span className="text-xs uppercase tracking-wider font-semibold font-mono">Episode Triage Queue</span>
+            <span className="text-xs uppercase tracking-wider font-semibold font-mono">Active Threat Events</span>
             <ShieldAlert className="w-4 h-4 text-rose-400" />
           </div>
           <div className="text-2xl font-bold font-mono text-white mb-1">
@@ -72,7 +72,7 @@ export const DatasetWorkspace: React.FC<Props> = ({ episodes, timeline }) => {
               Continuous Telemetry Audit Ledger
             </h3>
             <span className="text-[10px] px-2 py-0.5 rounded bg-slate-800 border border-slate-700 text-slate-300 font-mono">
-              UNOBSERVED WINDOW AUDIT
+              MONITORING GAPS
             </span>
           </div>
 
@@ -133,7 +133,7 @@ export const DatasetWorkspace: React.FC<Props> = ({ episodes, timeline }) => {
 
               <div className="p-3 bg-slate-950/50 rounded-lg border border-slate-800">
                 <div className="flex justify-between text-slate-400 mb-1">
-                  <span>Packet Ingress Velocity:</span>
+                  <span>Traffic Speed:</span>
                   <span className="text-rose-400 font-bold">Surge +38% Baseline</span>
                 </div>
                 <div className="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden mt-1.5">
@@ -143,7 +143,7 @@ export const DatasetWorkspace: React.FC<Props> = ({ episodes, timeline }) => {
 
               <div className="p-3 bg-slate-950/50 rounded-lg border border-slate-800">
                 <div className="flex justify-between text-slate-400 mb-1">
-                  <span>Subnet Sweep Persistence:</span>
+                  <span>Attack Duration:</span>
                   <span className="text-amber-300 font-bold">4 Consecutive Windows</span>
                 </div>
                 <div className="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden mt-1.5">

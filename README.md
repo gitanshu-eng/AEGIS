@@ -35,7 +35,7 @@ AEGIS is **predictive and autonomous**:
 
 | Resource | URL |
 |---|---|
-| Frontend (Vercel) | https://aegis-ph9ui09ar-astrophage2.vercel.app/ |
+| Frontend (Vercel) | https://aegis-six-lilac.vercel.app/ |
 | Backend API (Render) | https://aegis-api-hqnx.onrender.com |
 | API Health Check | https://aegis-api-hqnx.onrender.com/api/health |
 
